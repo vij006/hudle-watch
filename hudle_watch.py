@@ -1339,6 +1339,54 @@ async def main():
     except Exception as e:
         log(f"(grid export skipped: {e})")
 
+    # One CSV per venue, laid out exactly like that venue's Excel sheet:
+    # Date | Day | Slot Time | Court 1 | Court 2 | ... | Last checked
+    # Each becomes its own tab in Google Sheets via IMPORTDATA.
+    try:
+        import csv as _csv3
+        vdir = os.path.join(OUT_DIR, "venues")
+        os.makedirs(vdir, exist_ok=True)
+        index = []
+        for v in full:
+            if not v["courts"]:
+                continue
+            slug = re.sub(r"[^a-z0-9]+", "-", v["venue"].lower()).strip("-")[:60]
+            courts = [c["court"] for c in v["courts"]]
+            mins = v["courts"][0].get("slot_length") or 30
+            look = {(c["court"], sl["date"], sl["time"]): sl
+                    for c in v["courts"] for sl in c["slots"]}
+            vdates = sorted({sl["date"] for c in v["courts"] for sl in c["slots"]})
+            vtimes = sorted({sl["time"] for c in v["courts"] for sl in c["slots"]},
+                            key=_time_key)
+            path = os.path.join(vdir, slug + ".csv")
+            n = 0
+            with open(path, "w", encoding="utf-8", newline="") as fh:
+                w = _csv3.writer(fh)
+                w.writerow(["Date", "Day", "Slot Time"] + courts + ["Last checked"])
+                for d in vdates:
+                    dd = dt.date.fromisoformat(d)
+                    for t in vtimes:
+                        cells = [look.get((crt, d, t)) for crt in courts]
+                        if not any(c and c["status"] != "—" for c in cells):
+                            continue
+                        checked = next((c["checked"] for c in cells
+                                        if c and c.get("checked")), "")
+                        w.writerow([f"{dd:%d %b %Y}", f"{dd:%a}", time_range(t, mins)]
+                                   + [WORD.get(c["status"], c["status"]) if c else ""
+                                      for c in cells] + [checked])
+                        n += 1
+            index.append((v["venue"], f"output/venues/{slug}.csv", len(courts), n))
+
+        with open(os.path.join(vdir, "_index.csv"), "w", encoding="utf-8",
+                  newline="") as fh:
+            w = _csv3.writer(fh)
+            w.writerow(["Venue", "File to use in IMPORTDATA", "Courts", "Rows"])
+            for row in sorted(index):
+                w.writerow(row)
+        log(f"Per-venue sheets: {len(index)} files -> {vdir}")
+    except Exception as e:
+        log(f"(per-venue export skipped: {e})")
+
     latest = os.path.join(OUT_DIR, "latest.xlsx")
     try:
         import shutil
