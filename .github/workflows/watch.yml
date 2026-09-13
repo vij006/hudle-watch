@@ -40,13 +40,38 @@ jobs:
 
       - name: Save results back to the repo
         run: |
+          set -e
           git config user.name  "hudle-watch"
           git config user.email "actions@users.noreply.github.com"
-          git add -A output
-          if git diff --staged --quiet; then
-            echo "nothing changed"
-          else
+
+          # These result files must never be MERGED. Two runs produce two valid
+          # snapshots of the same moment-in-time data, and git cannot reconcile
+          # them — that is what caused "CONFLICT (content)" on every scheduled
+          # run. The newest run simply wins.
+          #
+          # So: move HEAD to whatever is on the server right now, WITHOUT
+          # touching the files this run just produced, then commit those files
+          # as a single change on top. There is nothing to merge, so there is
+          # nothing to conflict.
+          for attempt in 1 2 3; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            git reset --mixed "origin/${GITHUB_REF_NAME}"
+
+            git add -A output
+            if git diff --staged --quiet; then
+              echo "nothing changed - nothing to save"
+              exit 0
+            fi
+
             git commit -m "courts update $(date '+%d %b %H:%M IST')"
-            git pull --rebase --autostash
-            git push
-          fi
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              echo "saved on attempt ${attempt}"
+              exit 0
+            fi
+
+            echo "push rejected (someone else pushed first) - retrying"
+            sleep 5
+          done
+
+          echo "could not save after 3 attempts"
+          exit 1
