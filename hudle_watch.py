@@ -472,7 +472,7 @@ async def scrape_venue(page, url: str, sports, wanted, today: dt.date, log):
         log(f"    {vname}: no matching sport, skipped")
         return {"venue": vname, "url": url, "courts": []}
 
-    out = {"venue": vname, "url": url, "courts": []}
+    out = {"venue": vname, "url": url, "courts": [], "roster": []}
     fresh_needed = True          # first court of a venue always reloads
 
     for act_idx, act in matching_acts:
@@ -482,6 +482,11 @@ async def scrape_venue(page, url: str, sports, wanted, today: dt.date, log):
         for fac_idx, fac in enumerate(act["facilities"]):
             if RENTAL_RE.search(fac["name"]):
                 continue
+            # Record every court we INTEND to read. A court that fails must still
+            # show up as a column, otherwise it silently disappears and the sheet
+            # looks complete when it isn't.
+            if fac["name"] not in out["roster"]:
+                out["roster"].append(fac["name"])
             try:
                 slots, covered, reason, landed, ok = [], 0, "not attempted", None, False
 
@@ -1034,6 +1039,11 @@ def merge_into_history(history, data, today, keep_past_days=0):
                     "url": v.get("url", ""),
                     "checked": stamp,
                 }
+    rosters = history.setdefault("rosters", {})
+    for v in data:
+        if v.get("roster"):
+            rosters[v["venue"]] = v["roster"]
+
     cutoff = today - dt.timedelta(days=keep_past_days)
     for key in [k for k in slots if len(k.split(SEP)) == 5]:
         try:
@@ -1044,7 +1054,7 @@ def merge_into_history(history, data, today, keep_past_days=0):
     return history
 
 
-def history_to_data(history):
+def history_to_data(history, rosters=None):
     """Rebuild the venue/court/slot structure from the accumulated store."""
     venues = {}
     for key, rec in history.get("slots", {}).items():
@@ -1071,9 +1081,18 @@ def history_to_data(history):
             "seats_left": rec.get("seats_left"),
             "checked": rec.get("checked", ""),
         })
+    rosters = rosters if rosters is not None else history.get("rosters", {})
     out = []
     for v in venues.values():
         courts = list(v.pop("_courts").values())
+        # Re-insert courts the venue has but this run never managed to read.
+        have = {c["court"] for c in courts}
+        for i, cname in enumerate(rosters.get(v["venue"], [])):
+            if cname not in have:
+                courts.append({"sport": "", "court": cname, "slot_length": 30,
+                               "list_price": None, "slots": [], "days_covered": 0,
+                               "coverage_reason": "not read this run",
+                               "order": i, "missing": True})
         for c in courts:
             c["days_covered"] = len({s["date"] for s in c["slots"]})
         # Hudle's own order (Outdoor 1-4, then Indoor 1-3) reads far better than
@@ -1352,7 +1371,9 @@ async def main():
                 continue
             slug = re.sub(r"[^a-z0-9]+", "-", v["venue"].lower()).strip("-")[:60]
             courts = [c["court"] for c in v["courts"]]
-            mins = v["courts"][0].get("slot_length") or 30
+            missing_courts = {c["court"] for c in v["courts"] if c.get("missing")}
+            mins = next((c.get("slot_length") for c in v["courts"]
+                         if not c.get("missing")), 30) or 30
             look = {(c["court"], sl["date"], sl["time"]): sl
                     for c in v["courts"] for sl in c["slots"]}
             vdates = sorted({sl["date"] for c in v["courts"] for sl in c["slots"]})
@@ -1371,9 +1392,16 @@ async def main():
                             continue
                         checked = next((c["checked"] for c in cells
                                         if c and c.get("checked")), "")
+                        vals = []
+                        for crt, c in zip(courts, cells):
+                            if c:
+                                vals.append(WORD.get(c["status"], c["status"]))
+                            elif crt in missing_courts:
+                                vals.append("not checked")
+                            else:
+                                vals.append("")
                         w.writerow([f"{dd:%d %b %Y}", f"{dd:%a}", time_range(t, mins)]
-                                   + [WORD.get(c["status"], c["status"]) if c else ""
-                                      for c in cells] + [checked])
+                                   + vals + [checked])
                         n += 1
             index.append((v["venue"], f"output/venues/{slug}.csv", len(courts), n))
 
