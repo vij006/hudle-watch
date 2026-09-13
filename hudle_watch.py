@@ -985,6 +985,10 @@ def write_workbook(data, changes, path, today, days, sports, time_filter=None):
 
 HISTORY = "history.json"
 
+# How many past days to keep in the archive. Past dates are not bookable, but
+# they show how fast each slot fills, which is what tells you when to book.
+KEEP_DAYS = 90
+
 # Key separator. It must be something no venue or court name can contain.
 # "|" was a bad choice: a dozen venues are named like "Spodium Arena | Sector 29",
 # which split into too many pieces and were silently dropped from the workbook.
@@ -1007,22 +1011,84 @@ def _migrate_keys(slots):
     return fixed
 
 
+HIST_DIR = "history"
+
+
+def _day_files(out_dir):
+    d = os.path.join(out_dir, HIST_DIR)
+    if not os.path.isdir(d):
+        return []
+    return sorted(os.path.join(d, f) for f in os.listdir(d) if f.endswith(".json"))
+
+
 def load_history(out_dir):
-    path = os.path.join(out_dir, HISTORY)
-    if not os.path.exists(path):
-        return {"slots": {}}
-    try:
-        with open(path, encoding="utf-8") as fh:
-            h = json.load(fh)
-        if isinstance(h.get("slots"), dict):
-            h["slots"] = _migrate_keys(h["slots"])
-            return h
-    except Exception:
-        pass
-    return {"slots": {}}
+    """Read every day-file back into one store.
+
+    One file per day matters: a run only rewrites TODAY, so past days are
+    written once and never touched again. That is what makes 90 days of
+    history affordable when we commit to git every 30 minutes.
+    """
+    history = {"slots": {}, "rosters": {}}
+
+    # Legacy single-file store — fold it in once, then it can be deleted.
+    legacy = os.path.join(out_dir, HISTORY)
+    if os.path.exists(legacy):
+        try:
+            with open(legacy, encoding="utf-8") as fh:
+                old = json.load(fh)
+            history["slots"].update(_migrate_keys(old.get("slots", {}) or {}))
+            history["rosters"].update(old.get("rosters", {}) or {})
+        except Exception:
+            pass
+
+    for path in _day_files(out_dir):
+        try:
+            with open(path, encoding="utf-8") as fh:
+                day = json.load(fh)
+            history["slots"].update(_migrate_keys(day.get("slots", {}) or {}))
+            history["rosters"].update(day.get("rosters", {}) or {})
+        except Exception:
+            continue
+    return history
 
 
-def merge_into_history(history, data, today, keep_past_days=0):
+def save_history(out_dir, history, today):
+    """Write each day to its own file and drop days past the retention window."""
+    d = os.path.join(out_dir, HIST_DIR)
+    os.makedirs(d, exist_ok=True)
+
+    by_day = {}
+    for key, rec in history.get("slots", {}).items():
+        parts = key.split(SEP)
+        if len(parts) != 5:
+            continue
+        by_day.setdefault(parts[3], {})[key] = rec
+
+    rosters = history.get("rosters", {})
+    for date, slots in by_day.items():
+        with open(os.path.join(d, f"{date}.json"), "w", encoding="utf-8") as fh:
+            json.dump({"slots": slots, "rosters": rosters}, fh)
+
+    cutoff = today - dt.timedelta(days=KEEP_DAYS)
+    for path in _day_files(out_dir):
+        stem = os.path.splitext(os.path.basename(path))[0]
+        try:
+            if dt.date.fromisoformat(stem) < cutoff:
+                os.remove(path)
+        except Exception:
+            continue
+
+    # The old single file is now redundant.
+    legacy = os.path.join(out_dir, HISTORY)
+    if os.path.exists(legacy):
+        try:
+            os.remove(legacy)
+        except Exception:
+            pass
+    return len(by_day)
+
+
+def merge_into_history(history, data, today, keep_past_days=KEEP_DAYS):
     """Fold this run's readings into the store, then drop stale past dates."""
     stamp = dt.datetime.now().strftime("%d %b %H:%M")
     slots = history.setdefault("slots", {})
@@ -1278,11 +1344,23 @@ async def main():
 
     # Fold this run in; everything we did not look at this time survives intact.
     history = merge_into_history(history, data, today)
-    with open(os.path.join(OUT_DIR, HISTORY), "w", encoding="utf-8") as fh:
-        json.dump(history, fh)
+    n_days = save_history(OUT_DIR, history, today)
 
-    # The workbook renders the WHOLE store, not just this run.
-    full = history_to_data(history)
+    # The whole store, past days included — this is the archive.
+    archive = history_to_data(history)
+
+    # The live views show only what you can still BOOK. Yesterday's slots would
+    # only pad the sheets with rows nobody can act on.
+    full = []
+    for v in archive:
+        courts = []
+        for c in v["courts"]:
+            keep = [s for s in c["slots"]
+                    if dt.date.fromisoformat(s["date"]) >= today]
+            if keep or c.get("missing"):
+                courts.append({**c, "slots": keep})
+        if courts:
+            full.append({**v, "courts": courts})
     if time_filter:
         for v in full:
             for c in v["courts"]:
@@ -1423,6 +1501,40 @@ async def main():
         log(f"Per-venue sheets: {len(index)} files -> {vdir}")
     except Exception as e:
         log(f"(per-venue export skipped: {e})")
+
+    # Archive: every day still held in history, oldest first. Use this to see
+    # how early a given slot tends to disappear.
+    try:
+        import csv as _csv4
+        arows = []
+        for v in archive:
+            for c in v["courts"]:
+                for sl in c["slots"]:
+                    if sl["status"] == "—":
+                        continue
+                    arows.append([
+                        sl["date"], sl["dow"],
+                        time_range(sl["time"], c.get("slot_length") or 30),
+                        v["venue"], c["court"],
+                        WORD.get(sl["status"], sl["status"]),
+                        sl.get("price") or "", sl.get("checked", ""),
+                    ])
+        # Google Sheets struggles with very large IMPORTDATA files, so the
+        # rolling archive covers the last 14 days. Older days stay available as
+        # individual files under output/history/.
+        recent = (today - dt.timedelta(days=14)).isoformat()
+        arows = [r for r in arows if r[0] >= recent]
+        arows.sort(key=lambda r: (r[0], r[3], r[4], r[2]))
+        apath = os.path.join(OUT_DIR, "archive.csv")
+        with open(apath, "w", encoding="utf-8", newline="") as fh:
+            w = _csv4.writer(fh)
+            w.writerow(["Date", "Day", "Slot Time", "Venue", "Court",
+                        "Status", "Price", "Last checked"])
+            w.writerows(arows)
+        adays = len({r[0] for r in arows})
+        log(f"Archive: {len(arows):,} rows across {adays} day(s) -> {apath}")
+    except Exception as e:
+        log(f"(archive export skipped: {e})")
 
     latest = os.path.join(OUT_DIR, "latest.xlsx")
     try:
