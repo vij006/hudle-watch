@@ -1030,6 +1030,15 @@ def merge_into_history(history, data, today, keep_past_days=0):
         for ci, c in enumerate(v["courts"]):
             for s in c["slots"]:
                 key = SEP.join([v["venue"], c["sport"], c["court"], s["date"], s["time"]])
+
+                # Once a slot's time has passed, Hudle greys it out and we read
+                # it as "—". Do NOT let that erase what we already knew about
+                # it. Keep the last real status instead, so the day's record
+                # stays intact instead of dissolving into blanks as it ages.
+                prev = slots.get(key)
+                if s["status"] == "—" and prev and prev.get("status") not in ("—", None):
+                    continue
+
                 slots[key] = {
                     "order": ci,
                     "status": s["status"],
