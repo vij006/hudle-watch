@@ -1,0 +1,52 @@
+name: Hudle Watch
+
+on:
+  schedule:
+    # Every 30 minutes. GitHub may run it a few minutes late when busy.
+    - cron: "*/30 * * * *"
+  workflow_dispatch:        # lets you press "Run workflow" by hand
+
+permissions:
+  contents: write           # needed so the run can save results back
+
+concurrency:
+  group: hudle-watch        # never let two runs overlap
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      TZ: Asia/Kolkata      # so "today" means today in Noida, not UTC
+
+    steps:
+      - name: Get the code and previous results
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install libraries
+        run: pip install -r requirements.txt
+
+      - name: Install the browser
+        run: python -m playwright install --with-deps chromium
+
+      - name: Check courts
+        run: python hudle_watch.py --workers 4
+
+      - name: Save results back to the repo
+        run: |
+          git config user.name  "hudle-watch"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A output
+          if git diff --staged --quiet; then
+            echo "nothing changed"
+          else
+            git commit -m "courts update $(date '+%d %b %H:%M IST')"
+            git pull --rebase --autostash
+            git push
+          fi
