@@ -259,7 +259,7 @@ def head_dates(grid, today: dt.date):
     return out
 
 
-async def wait_for_window(page, after: dt.date, today: dt.date, seconds: float = 16.0):
+async def wait_for_window(page, after: dt.date, today: dt.date, seconds: float = 32.0):
     """Wait until the grid shows a date window starting strictly after `after`.
 
     Comparing real dates — not the header string — is what makes paging
@@ -1312,7 +1312,10 @@ async def main():
         if workers > 1:
             log(f"Running {workers} venues at a time.")
 
-        async def run_bucket(bucket):
+        async def run_bucket(bucket, worker_no):
+            # Stagger the start. Four tabs loading the same heavy page at the
+            # same instant on a shared 2-core runner is what starves them.
+            await asyncio.sleep(worker_no * 3)
             page = await ctx.new_page()
             try:
                 for url in bucket:
@@ -1333,7 +1336,7 @@ async def main():
                 except Exception:
                     pass
 
-        await asyncio.gather(*(run_bucket(b) for b in buckets))
+        await asyncio.gather(*(run_bucket(b, i) for i, b in enumerate(buckets)))
         await browser.close()
 
     # Changes are measured against what we knew about THESE dates before.
