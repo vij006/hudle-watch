@@ -637,6 +637,40 @@ def time_range(start_label: str, minutes: int) -> str:
     return f"{fmt(t0)} to {fmt(t1)}"
 
 
+def slot_end(date_str: str, start_label: str, minutes: int):
+    """When a slot finishes, as a real datetime. None if the label is odd."""
+    try:
+        d = dt.date.fromisoformat(date_str)
+        t0 = dt.datetime.strptime(start_label.strip().upper(), "%I:%M %p")
+    except (ValueError, TypeError):
+        return None
+    return dt.datetime.combine(d, t0.time()) + dt.timedelta(minutes=minutes or 30)
+
+
+def slot_ladder(times, step: int):
+    """
+    Every slot label from the earliest to the latest this venue has, `step`
+    minutes apart — including the ones with no data.
+
+    Without this the sheet jumps straight from '10:30 to 11:00 am' to
+    '3:00 to 3:30 pm' and it reads like something went wrong. With it the time
+    column runs unbroken and a gap simply shows as empty cells, which is the
+    honest picture: the venue is shut, or nothing was read.
+    """
+    keys = [_time_key(t) for t in times]
+    keys = [k for k in keys if k != dt.datetime.min]
+    if not keys:
+        return sorted(set(times), key=_time_key)
+    lo, hi = min(keys), max(keys)
+    step = max(5, int(step or 30))
+    out, cur = [], lo
+    while cur <= hi:
+        out.append(cur.strftime("%I:%M %p"))
+        cur += dt.timedelta(minutes=step)
+    out.extend(times)                      # keep any label off the ladder
+    return sorted(set(out), key=_time_key)
+
+
 def _coverage_line(data, days):
     """Separate 'the venue does not open bookings that far' from a real failure."""
     limited, failed = [], []
@@ -911,12 +945,13 @@ def write_workbook(data, changes, path, today, days, sports, time_filter=None):
         ws = wb.create_sheet(name)
 
         dates = sorted({s["date"] for c in v["courts"] for s in c["slots"]})
-        times = sorted({s["time"] for c in v["courts"] for s in c["slots"]},
-                       key=_time_key)
         lookup = {(c["court"], s["date"], s["time"]): s
                   for c in v["courts"] for s in c["slots"]}
         courts = [c["court"] for c in v["courts"]]
         slot_len = {c["court"]: (c.get("slot_length") or 30) for c in v["courts"]}
+        step = min([c.get("slot_length") or 30 for c in v["courts"]
+                    if not c.get("missing")] or [30])
+        times = slot_ladder({s["time"] for c in v["courts"] for s in c["slots"]}, step)
 
         ws.cell(row=1, column=1, value=v["venue"]).font = title
         ws.cell(row=2, column=1,
@@ -940,10 +975,8 @@ def write_workbook(data, changes, path, today, days, sports, time_filter=None):
             dd = dt.date.fromisoformat(d)
             for t in times:
                 cells = [lookup.get((crt, d, t)) for crt in courts]
-                # A row where every court is blank is a past time or a closed
-                # hour — nothing to decide about, so leave it out.
-                if not any(c and c["status"] != "—" for c in cells):
-                    continue
+                # Blank rows stay in. An empty 11:00 am row says "shut, or not
+                # read" — dropping it made the time column jump and look broken.
                 mins = slot_len.get(courts[0], 30)
                 ws.cell(row=row, column=1, value=f"{dd:%d %b %Y}").font = body
                 ws.cell(row=row, column=2, value=f"{dd:%a}").font = body
@@ -1090,18 +1123,31 @@ def save_history(out_dir, history, today):
 
 def merge_into_history(history, data, today, keep_past_days=KEEP_DAYS):
     """Fold this run's readings into the store, then drop stale past dates."""
-    stamp = dt.datetime.now().strftime("%d %b %H:%M")
+    now = dt.datetime.now()
+    stamp = now.strftime("%d %b %H:%M")
     slots = history.setdefault("slots", {})
     for v in data:
         for ci, c in enumerate(v["courts"]):
+            mins = c.get("slot_length") or 30
             for s in c["slots"]:
                 key = SEP.join([v["venue"], c["sport"], c["court"], s["date"], s["time"]])
-
-                # Once a slot's time has passed, Hudle greys it out and we read
-                # it as "—". Do NOT let that erase what we already knew about
-                # it. Keep the last real status instead, so the day's record
-                # stays intact instead of dissolving into blanks as it ages.
                 prev = slots.get(key)
+
+                # A slot that has already finished is history: nobody can book
+                # it and nothing about it can change. Freeze it exactly as it
+                # was the last time it was still live — status AND timestamp.
+                #
+                # This matters because venues differ. Some drop past slots off
+                # the grid, some leave them sitting there looking bookable. On
+                # those second ones we were re-reading 5 am at 11:32 am and
+                # stamping it "last checked 11:32", which is nonsense. Now
+                # every venue behaves the same way.
+                end = slot_end(s["date"], s["time"], mins)
+                if prev and end and end <= now:
+                    continue
+
+                # Same idea for the greyed-out reading itself: never let a "—"
+                # erase a real status we already recorded.
                 if s["status"] == "—" and prev and prev.get("status") not in ("—", None):
                     continue
 
@@ -1467,8 +1513,10 @@ async def main():
             look = {(c["court"], sl["date"], sl["time"]): sl
                     for c in v["courts"] for sl in c["slots"]}
             vdates = sorted({sl["date"] for c in v["courts"] for sl in c["slots"]})
-            vtimes = sorted({sl["time"] for c in v["courts"] for sl in c["slots"]},
-                            key=_time_key)
+            step = min([c.get("slot_length") or 30 for c in v["courts"]
+                        if not c.get("missing")] or [30])
+            vtimes = slot_ladder({sl["time"] for c in v["courts"]
+                                  for sl in c["slots"]}, step)
             path = os.path.join(vdir, slug + ".csv")
             n = 0
             with open(path, "w", encoding="utf-8", newline="") as fh:
@@ -1478,15 +1526,16 @@ async def main():
                     dd = dt.date.fromisoformat(d)
                     for t in vtimes:
                         cells = [look.get((crt, d, t)) for crt in courts]
-                        if not any(c and c["status"] != "—" for c in cells):
-                            continue
+                        # Blank rows stay in, so the Slot Time column runs
+                        # unbroken from the first slot of the day to the last.
+                        live = any(c and c["status"] != "—" for c in cells)
                         checked = next((c["checked"] for c in cells
                                         if c and c.get("checked")), "")
                         vals = []
                         for crt, c in zip(courts, cells):
                             if c:
                                 vals.append(WORD.get(c["status"], c["status"]))
-                            elif crt in missing_courts:
+                            elif crt in missing_courts and live:
                                 vals.append("not checked")
                             else:
                                 vals.append("")
