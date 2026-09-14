@@ -2,7 +2,7 @@ Venue,File to use in IMPORTDATA,Courts,Rows
 Anandmay Sports Club | Sector 128,output/venues/anandmay-sports-club-sector-128.csv,2,48
 Arena 44,output/venues/arena-44.csv,7,24
 CoPlay RISE | Sec 73 Noida,output/venues/coplay-rise-sec-73-noida.csv,2,18
-CoPlay | Sec 50 Noida,output/venues/coplay-sec-50-noida.csv,2,6
+CoPlay | Sec 50 Noida,output/venues/coplay-sec-50-noida.csv,3,6
 Crickdome,output/venues/crickdome.csv,2,40
 Dinking Zone One29,output/venues/dinking-zone-one29.csv,3,48
 Downtown Pickleball | Sector 37,output/venues/downtown-pickleball-sector-37.csv,1,7
@@ -23,5 +23,5 @@ Rally N Roast | Sector 141,output/venues/rally-n-roast-sector-141.csv,3,32
 Sky Nine Rackets,output/venues/sky-nine-rackets.csv,5,38
 Spodium Arena | Sector 29,output/venues/spodium-arena-sector-29.csv,4,30
 Spuddy Multisports Academy | Noida,output/venues/spuddy-multisports-academy-noida.csv,1,19
-The Box Cage,output/venues/the-box-cage.csv,3,22
+The Box Cage,output/venues/the-box-cage.csv,4,22
 Zyng Gallant Sports Arena,output/venues/zyng-gallant-sports-arena.csv,1,12
