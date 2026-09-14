@@ -1,6 +1,14 @@
 Date,Day,Slot Time,Court 1,Court 2,Last checked
 14 Sep 2026,Mon,12:00 am to 12:30 am,Not Booked,,14 Sep 00:25
 14 Sep 2026,Mon,12:30 am to 1:00 am,Not Booked,Not Booked,14 Sep 00:25
+14 Sep 2026,Mon,1:00 am to 1:30 am,,,
+14 Sep 2026,Mon,1:30 am to 2:00 am,,,
+14 Sep 2026,Mon,2:00 am to 2:30 am,,,
+14 Sep 2026,Mon,2:30 am to 3:00 am,,,
+14 Sep 2026,Mon,3:00 am to 3:30 am,,,
+14 Sep 2026,Mon,3:30 am to 4:00 am,,,
+14 Sep 2026,Mon,4:00 am to 4:30 am,,,
+14 Sep 2026,Mon,4:30 am to 5:00 am,,,
 14 Sep 2026,Mon,5:00 am to 5:30 am,Not Booked,Not Booked,14 Sep 05:22
 14 Sep 2026,Mon,5:30 am to 6:00 am,Not Booked,Not Booked,14 Sep 05:22
 14 Sep 2026,Mon,6:00 am to 6:30 am,Not Booked,Not Booked,14 Sep 06:30
