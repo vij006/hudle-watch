@@ -988,7 +988,9 @@ def write_workbook(data, changes, path, today, days, sports, time_filter=None):
                 for j, crt in enumerate(courts):
                     s = lookup.get((crt, d, t))
                     st = s["status"] if s else "—"
-                    if s and s.get("checked"):
+                    # Only a row with a real status gets a timestamp; a shut
+                    # hour is blank end to end.
+                    if s and s.get("checked") and st != "—":
                         checked = s["checked"]
                     c = ws.cell(row=row, column=4 + j, value=WORD.get(st, st))
                     c.font = body
@@ -1214,7 +1216,15 @@ def history_to_data(history, rosters=None):
                                "list_price": None, "slots": [], "days_covered": 0,
                                "coverage_reason": "not read this run",
                                "order": i, "missing": True})
+        # Column order comes from the venue's own court list, never from the
+        # order this run happened to read them in. When one court failed, every
+        # court after it used to shift up a place and the columns reshuffled —
+        # Court 4 (Outdoor) landing between the Indoor ones. The roster is the
+        # venue's full list whether a court read or not, so it holds still.
+        seats = {name: i for i, name in enumerate(rosters.get(v["venue"], []))}
         for c in courts:
+            if c["court"] in seats:
+                c["order"] = seats[c["court"]]
             c["days_covered"] = len({s["date"] for s in c["slots"]})
         # Hudle's own order (Outdoor 1-4, then Indoor 1-3) reads far better than
         # alphabetical, which interleaves them.
@@ -1529,8 +1539,11 @@ async def main():
                         # Blank rows stay in, so the Slot Time column runs
                         # unbroken from the first slot of the day to the last.
                         live = any(c and c["status"] != "—" for c in cells)
+                        # An empty row was never really "checked" — the venue is
+                        # shut then. A lone timestamp on a blank row just raises
+                        # a question it can't answer, so leave it out.
                         checked = next((c["checked"] for c in cells
-                                        if c and c.get("checked")), "")
+                                        if c and c.get("checked")), "") if live else ""
                         vals = []
                         for crt, c in zip(courts, cells):
                             if c:
