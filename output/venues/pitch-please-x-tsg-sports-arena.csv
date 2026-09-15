@@ -17,18 +17,18 @@ Date,Day,Slot Time,Court 1,Court 2,Last checked
 15 Sep 2026,Tue,7:30 am to 8:00 am,Not Booked,Not Booked,15 Sep 07:31
 15 Sep 2026,Tue,8:00 am to 8:30 am,Not Booked,Not Booked,15 Sep 08:07
 15 Sep 2026,Tue,8:30 am to 9:00 am,Not Booked,Not Booked,15 Sep 08:33
-15 Sep 2026,Tue,9:00 am to 9:30 am,Not Booked,Not Booked,15 Sep 08:33
-15 Sep 2026,Tue,9:30 am to 10:00 am,Not Booked,Not Booked,15 Sep 08:33
-15 Sep 2026,Tue,10:00 am to 10:30 am,Not Booked,Not Booked,15 Sep 08:33
-15 Sep 2026,Tue,10:30 am to 11:00 am,Not Booked,Not Booked,15 Sep 08:33
-15 Sep 2026,Tue,11:00 am to 11:30 am,Not Booked,Not Booked,15 Sep 08:33
-15 Sep 2026,Tue,11:30 am to 12:00 pm,Not Booked,Not Booked,15 Sep 08:33
-15 Sep 2026,Tue,12:00 pm to 12:30 pm,Not Booked,Not Booked,15 Sep 08:33
-15 Sep 2026,Tue,12:30 pm to 1:00 pm,Not Booked,Not Booked,15 Sep 08:33
-15 Sep 2026,Tue,1:00 pm to 1:30 pm,Not Booked,Not Booked,15 Sep 08:33
-15 Sep 2026,Tue,1:30 pm to 2:00 pm,Not Booked,Not Booked,15 Sep 08:33
-15 Sep 2026,Tue,2:00 pm to 2:30 pm,Not Booked,Not Booked,15 Sep 08:33
-15 Sep 2026,Tue,2:30 pm to 3:00 pm,Not Booked,Not Booked,15 Sep 08:33
+15 Sep 2026,Tue,9:00 am to 9:30 am,Not Booked,Not Booked,15 Sep 09:05
+15 Sep 2026,Tue,9:30 am to 10:00 am,Not Booked,Not Booked,15 Sep 09:05
+15 Sep 2026,Tue,10:00 am to 10:30 am,Not Booked,Not Booked,15 Sep 09:05
+15 Sep 2026,Tue,10:30 am to 11:00 am,Not Booked,Not Booked,15 Sep 09:05
+15 Sep 2026,Tue,11:00 am to 11:30 am,Not Booked,Not Booked,15 Sep 09:05
+15 Sep 2026,Tue,11:30 am to 12:00 pm,Not Booked,Not Booked,15 Sep 09:05
+15 Sep 2026,Tue,12:00 pm to 12:30 pm,Not Booked,Not Booked,15 Sep 09:05
+15 Sep 2026,Tue,12:30 pm to 1:00 pm,Not Booked,Not Booked,15 Sep 09:05
+15 Sep 2026,Tue,1:00 pm to 1:30 pm,Not Booked,Not Booked,15 Sep 09:05
+15 Sep 2026,Tue,1:30 pm to 2:00 pm,Not Booked,Not Booked,15 Sep 09:05
+15 Sep 2026,Tue,2:00 pm to 2:30 pm,Not Booked,Not Booked,15 Sep 09:05
+15 Sep 2026,Tue,2:30 pm to 3:00 pm,Not Booked,Not Booked,15 Sep 09:05
 15 Sep 2026,Tue,3:00 pm to 3:30 pm,,,
 15 Sep 2026,Tue,3:30 pm to 4:00 pm,,,
 15 Sep 2026,Tue,4:00 pm to 4:30 pm,,,
@@ -45,5 +45,5 @@ Date,Day,Slot Time,Court 1,Court 2,Last checked
 15 Sep 2026,Tue,9:30 pm to 10:00 pm,,,
 15 Sep 2026,Tue,10:00 pm to 10:30 pm,,,
 15 Sep 2026,Tue,10:30 pm to 11:00 pm,,,
-15 Sep 2026,Tue,11:00 pm to 11:30 pm,Not Booked,Not Booked,15 Sep 08:33
-15 Sep 2026,Tue,11:30 pm to 12:00 am,Not Booked,Not Booked,15 Sep 08:33
+15 Sep 2026,Tue,11:00 pm to 11:30 pm,Not Booked,Not Booked,15 Sep 09:05
+15 Sep 2026,Tue,11:30 pm to 12:00 am,Not Booked,Not Booked,15 Sep 09:05
