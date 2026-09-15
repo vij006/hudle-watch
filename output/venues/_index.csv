@@ -1,6 +1,6 @@
 Venue,File to use in IMPORTDATA,Courts,Rows
 Anandmay Sports Club | Sector 128,output/venues/anandmay-sports-club-sector-128.csv,2,48
-Arena 44,output/venues/arena-44.csv,6,34
+Arena 44,output/venues/arena-44.csv,7,34
 CoPlay RISE | Sec 73 Noida,output/venues/coplay-rise-sec-73-noida.csv,2,38
 CoPlay | Sec 50 Noida,output/venues/coplay-sec-50-noida.csv,3,34
 Crickdome,output/venues/crickdome.csv,2,48
