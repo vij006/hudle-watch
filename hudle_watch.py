@@ -671,6 +671,53 @@ def slot_ladder(times, step: int):
     return sorted(set(out), key=_time_key)
 
 
+FREE = ("Available", "Filling fast")
+
+
+def day_matrix(archive, date_str: str, step: int = 30):
+    """
+    One day, laid out the way you actually decide: time down the left, every
+    venue across the top, and each cell saying how many of that venue's courts
+    are still free — '3 / 7'.
+
+    A venue running 60-minute slots gets its slot written into both half-hour
+    rows it covers, otherwise it would look shut on every other line.
+
+    Returns (venue names, [(slot label, [cell, ...]), ...]).
+    """
+    # free/total per (venue, slot start)
+    tally, times = {}, set()
+    for v in archive:
+        for c in v["courts"]:
+            mins = c.get("slot_length") or 30
+            span = max(1, int(mins) // step)
+            for sl in c["slots"]:
+                if sl["date"] != date_str or sl["status"] == "—":
+                    continue
+                t0 = _time_key(sl["time"])
+                if t0 == dt.datetime.min:
+                    continue
+                for k in range(span):
+                    label = (t0 + dt.timedelta(minutes=k * step)).strftime("%I:%M %p")
+                    times.add(label)
+                    cell = tally.setdefault((v["venue"], label), [0, 0])
+                    cell[1] += 1
+                    if sl["status"] in FREE:
+                        cell[0] += 1
+
+    if not tally:
+        return [], []
+    venues = sorted({vn for vn, _ in tally})
+    rows = []
+    for label in slot_ladder(times, step):
+        line = []
+        for vn in venues:
+            got = tally.get((vn, label))
+            line.append(f"{got[0]} / {got[1]}" if got else "")
+        rows.append((time_range(label, step), line))
+    return venues, rows
+
+
 def _coverage_line(data, days):
     """Separate 'the venue does not open bookings that far' from a real failure."""
     limited, failed = [], []
@@ -697,7 +744,8 @@ def _coverage_line(data, days):
     return "Coverage: " + " ".join(parts)
 
 
-def write_workbook(data, changes, path, today, days, sports, time_filter=None):
+def write_workbook(data, changes, path, today, days, sports, time_filter=None,
+                   archive=None):
     from openpyxl import Workbook
     from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
     from openpyxl.utils import get_column_letter
@@ -932,6 +980,46 @@ def write_workbook(data, changes, path, today, days, sports, time_filter=None):
         if r > hrow + 1:
             ws.auto_filter.ref = f"A{hrow}:{get_column_letter(3 + len(wdates))}{r-1}"
 
+    # ---- One sheet per day: time down the left, venues across the top --------
+    for dstr in sorted({sl["date"] for v in (archive or []) for c in v["courts"]
+                        for sl in c["slots"]
+                        if dt.date.fromisoformat(sl["date"]) <= today},
+                       reverse=True)[:MATRIX_DAYS]:
+        venues, rows = day_matrix(archive, dstr)
+        if not venues:
+            continue
+        dd = dt.date.fromisoformat(dstr)
+        ws = wb.create_sheet(f"{dd:%d %b} grid")
+        ws.cell(row=1, column=1, value=f"{dd:%A %d %B %Y}").font = title
+        ws.cell(row=2, column=1,
+                value="courts free / courts open, per venue. Blank = venue shut "
+                      "at that time.").font = note
+
+        ws.cell(row=4, column=1, value="Slot Time").fill = hdr_fill
+        ws.cell(row=4, column=1).font = hdr
+        ws.cell(row=4, column=1).border = box
+        ws.column_dimensions["A"].width = 24
+        for j, vn in enumerate(venues, start=2):
+            c = ws.cell(row=4, column=j, value=vn)
+            c.fill = hdr_fill; c.font = hdr; c.border = box
+            c.alignment = Alignment(horizontal="center", vertical="center",
+                                    wrap_text=True)
+            ws.column_dimensions[get_column_letter(j)].width = 14
+        ws.row_dimensions[4].height = 46
+        ws.freeze_panes = ws.cell(row=5, column=2)
+
+        for i, (label, line) in enumerate(rows, start=5):
+            lc = ws.cell(row=i, column=1, value=label)
+            lc.font = body; lc.border = box
+            lc.alignment = Alignment(horizontal="center")
+            for j, val in enumerate(line, start=2):
+                c = ws.cell(row=i, column=j, value=val)
+                c.font = body; c.border = box
+                c.alignment = Alignment(horizontal="center", vertical="center")
+                if val:
+                    c.fill = FILLS["Available"] if not val.startswith("0 ") \
+                        else FILLS["Booked"]
+
     # ---- One sheet per venue, laid out court-by-court ------------------------
     used = set()
     for v in data:
@@ -1023,6 +1111,9 @@ HISTORY = "history.json"
 # How many past days to keep in the archive. Past dates are not bookable, but
 # they show how fast each slot fills, which is what tells you when to book.
 KEEP_DAYS = 90
+
+# How many day-grid tabs to publish (day0 = today, day1 = yesterday, ...).
+MATRIX_DAYS = 4
 
 # Key separator. It must be something no venue or court name can contain.
 # "|" was a bad choice: a dozen venues are named like "Spodium Arena | Sector 29",
@@ -1432,7 +1523,7 @@ async def main():
     xlsx = os.path.join(OUT_DIR, f"courts_{stamp}.xlsx")
     n_open, n_rows = write_workbook(full, changes, xlsx, today,
                                     max(1, len(all_dates_known)), sports,
-                                    time_filter=time_filter)
+                                    time_filter=time_filter, archive=archive)
 
     # Flat CSV as well as the workbook. A CSV in a public repo can be pulled
     # straight into Google Sheets with =IMPORTDATA(url) — no credentials, no
@@ -1566,6 +1657,40 @@ async def main():
         log(f"Per-venue sheets: {len(index)} files -> {vdir}")
     except Exception as e:
         log(f"(per-venue export skipped: {e})")
+
+    # One file per day: time down the left, venues across the top.
+    #
+    # The names are day0..day3, NOT dates. day0 is always today, day1 always
+    # yesterday. That way the Google Sheets formulas are written once and keep
+    # working — a dated filename would break every tab at midnight. The date
+    # itself sits in cell A1.
+    try:
+        import csv as _csv5
+        mdir = os.path.join(OUT_DIR, "byday")
+        os.makedirs(mdir, exist_ok=True)
+        have_dates = sorted({sl["date"] for v in archive for c in v["courts"]
+                             for sl in c["slots"]
+                             if dt.date.fromisoformat(sl["date"]) <= today},
+                            reverse=True)[:MATRIX_DAYS]
+        for i in range(MATRIX_DAYS):
+            path = os.path.join(mdir, f"day{i}.csv")
+            with open(path, "w", encoding="utf-8", newline="") as fh:
+                w = _csv5.writer(fh)
+                if i >= len(have_dates):
+                    w.writerow(["No data held for this day yet"])
+                    continue
+                dstr = have_dates[i]
+                dd = dt.date.fromisoformat(dstr)
+                venues, rows = day_matrix(archive, dstr)
+                if not venues:
+                    w.writerow([f"{dd:%a %d %b %Y} — nothing recorded"])
+                    continue
+                w.writerow([f"{dd:%a %d %b %Y}"] + venues)
+                for label, line in rows:
+                    w.writerow([label] + line)
+            log(f"Day grid: {path}")
+    except Exception as e:
+        log(f"(day grid export skipped: {e})")
 
     # Archive: every day still held in history, oldest first. Use this to see
     # how early a given slot tends to disappear.
