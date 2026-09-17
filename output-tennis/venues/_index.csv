@@ -1,6 +1,6 @@
 Venue,File to use in IMPORTDATA,Courts,Rows
-Apex Sports Academy | Noida,output/venues/apex-sports-academy-noida.csv,1,12
-Global Sports Complex | Noida,output/venues/global-sports-complex-noida.csv,1,38
-Indrayu Jeta Sports | Noida,output/venues/indrayu-jeta-sports-noida.csv,1,16
-Spodium Arena | Sector 29,output/venues/spodium-arena-sector-29.csv,1,38
-Way To Slams Tennis Academy,output/venues/way-to-slams-tennis-academy.csv,1,48
+Apex Sports Academy | Noida,output-tennis/venues/apex-sports-academy-noida.csv,1,12
+Global Sports Complex | Noida,output-tennis/venues/global-sports-complex-noida.csv,1,38
+Indrayu Jeta Sports | Noida,output-tennis/venues/indrayu-jeta-sports-noida.csv,1,16
+Spodium Arena | Sector 29,output-tennis/venues/spodium-arena-sector-29.csv,1,38
+Way To Slams Tennis Academy,output-tennis/venues/way-to-slams-tennis-academy.csv,1,48
