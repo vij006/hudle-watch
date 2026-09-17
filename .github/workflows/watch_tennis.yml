@@ -1,0 +1,79 @@
+name: Hudle Watch Tennis
+
+on:
+  schedule:
+    # Every 30 minutes, offset by 15 from the pickleball run so the two are
+    # never pushing results to the repo at the same moment.
+    - cron: "15,45 * * * *"
+  workflow_dispatch:        # lets you press "Run workflow" by hand
+
+permissions:
+  contents: write           # needed so the run can save results back
+
+concurrency:
+  group: hudle-watch-tennis # its own lock, independent of pickleball
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      TZ: Asia/Kolkata      # so "today" means today in Noida, not UTC
+
+    steps:
+      - name: Get the code and previous results
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install libraries
+        run: pip install -r requirements.txt
+
+      - name: Install the browser
+        run: python -m playwright install --with-deps chromium
+
+      - name: Check tennis courts
+        run: >
+          python hudle_watch.py
+          --sports tennis
+          --venues venues_tennis.txt
+          --out output-tennis
+          --workers 4
+
+      - name: Save results back to the repo
+        run: |
+          set -e
+          git config user.name  "hudle-watch"
+          git config user.email "actions@users.noreply.github.com"
+
+          # Same rule as the pickleball run: these files must never be MERGED.
+          # Move HEAD to whatever the server has, leave this run's files alone,
+          # commit them on top. Nothing to merge, so nothing to conflict.
+          # Note it only ever touches output-tennis, so it cannot disturb the
+          # pickleball results.
+          for attempt in 1 2 3; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            git reset --mixed "origin/${GITHUB_REF_NAME}"
+
+            git add -A output-tennis
+            if git diff --staged --quiet; then
+              echo "nothing changed - nothing to save"
+              exit 0
+            fi
+
+            git commit -m "tennis update $(date '+%d %b %H:%M IST')"
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              echo "saved on attempt ${attempt}"
+              exit 0
+            fi
+
+            echo "push rejected (someone else pushed first) - retrying"
+            sleep 5
+          done
+
+          echo "could not save after 3 attempts"
+          exit 1
