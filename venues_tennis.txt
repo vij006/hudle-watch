@@ -1,0 +1,12 @@
+# Tennis venues on Hudle — one URL per line.
+# Lines starting with # are ignored, so you can park a venue without deleting it.
+
+https://hudle.in/venues/way-to-slam-tennis-academy/798218
+https://hudle.in/venues/apex-sports-academy-noida/934050
+https://hudle.in/venues/spodium-arena/607735
+https://hudle.in/venues/indrayu-jeta-sports-noida/727414
+https://hudle.in/venues/global-sports-complex-noida/298985
+https://hudle.in/venues/ramagya-sports-academy/427052
+
+# Ramagya also runs a separate padel venue on Hudle. Delete the # to include it:
+# https://hudle.in/venues/padel-tennis-rsa/819716
