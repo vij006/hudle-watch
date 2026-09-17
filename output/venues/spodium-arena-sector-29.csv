@@ -1,39 +1,39 @@
-Date,Day,Slot Time,Court 1,Court 2,Court 3,Court 4,Last checked
-17 Sep 2026,Thu,5:00 am to 5:30 am,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 05:29
-17 Sep 2026,Thu,5:30 am to 6:00 am,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 05:29
-17 Sep 2026,Thu,6:00 am to 6:30 am,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 06:10
-17 Sep 2026,Thu,6:30 am to 7:00 am,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 06:36
-17 Sep 2026,Thu,7:00 am to 7:30 am,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 07:05
-17 Sep 2026,Thu,7:30 am to 8:00 am,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 07:32
-17 Sep 2026,Thu,8:00 am to 8:30 am,Not Booked,Not Booked,,Not Booked,17 Sep 08:04
-17 Sep 2026,Thu,8:30 am to 9:00 am,Not Booked,Not Booked,,Not Booked,17 Sep 08:33
-17 Sep 2026,Thu,9:00 am to 9:30 am,Not Booked,Not Booked,,Not Booked,17 Sep 09:04
-17 Sep 2026,Thu,9:30 am to 10:00 am,Not Booked,Not Booked,,Not Booked,17 Sep 09:33
-17 Sep 2026,Thu,10:00 am to 10:30 am,Not Booked,Not Booked,,Not Booked,17 Sep 10:06
-17 Sep 2026,Thu,10:30 am to 11:00 am,Not Booked,Not Booked,,Not Booked,17 Sep 10:31
-17 Sep 2026,Thu,11:00 am to 11:30 am,Not Booked,Not Booked,,Not Booked,17 Sep 11:05
-17 Sep 2026,Thu,11:30 am to 12:00 pm,Not Booked,Not Booked,,Not Booked,17 Sep 11:32
-17 Sep 2026,Thu,12:00 pm to 12:30 pm,Not Booked,Not Booked,,Not Booked,17 Sep 12:11
-17 Sep 2026,Thu,12:30 pm to 1:00 pm,Not Booked,Not Booked,,Not Booked,17 Sep 12:11
-17 Sep 2026,Thu,1:00 pm to 1:30 pm,Not Booked,Not Booked,,Not Booked,17 Sep 13:06
-17 Sep 2026,Thu,1:30 pm to 2:00 pm,Not Booked,Not Booked,,Not Booked,17 Sep 13:06
-17 Sep 2026,Thu,2:00 pm to 2:30 pm,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 14:06
-17 Sep 2026,Thu,2:30 pm to 3:00 pm,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 14:32
-17 Sep 2026,Thu,3:00 pm to 3:30 pm,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 15:06
-17 Sep 2026,Thu,3:30 pm to 4:00 pm,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 15:33
-17 Sep 2026,Thu,4:00 pm to 4:30 pm,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 16:04
-17 Sep 2026,Thu,4:30 pm to 5:00 pm,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 16:34
-17 Sep 2026,Thu,5:00 pm to 5:30 pm,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 17:04
-17 Sep 2026,Thu,5:30 pm to 6:00 pm,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 17:30
-17 Sep 2026,Thu,6:00 pm to 6:30 pm,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 18:08
-17 Sep 2026,Thu,6:30 pm to 7:00 pm,Not Booked,Booked,Not Booked,Not Booked,17 Sep 18:36
-17 Sep 2026,Thu,7:00 pm to 7:30 pm,Not Booked,Booked,Booked,Not Booked,17 Sep 19:05
-17 Sep 2026,Thu,7:30 pm to 8:00 pm,Not Booked,Booked,Booked,Not Booked,17 Sep 19:33
-17 Sep 2026,Thu,8:00 pm to 8:30 pm,Not Booked,Not Booked,Booked,Not Booked,17 Sep 20:07
-17 Sep 2026,Thu,8:30 pm to 9:00 pm,Not Booked,Not Booked,Booked,Not Booked,17 Sep 20:30
-17 Sep 2026,Thu,9:00 pm to 9:30 pm,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 21:05
-17 Sep 2026,Thu,9:30 pm to 10:00 pm,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 21:30
-17 Sep 2026,Thu,10:00 pm to 10:30 pm,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 22:05
-17 Sep 2026,Thu,10:30 pm to 11:00 pm,Not Booked,Not Booked,Booked,Not Booked,17 Sep 22:32
-17 Sep 2026,Thu,11:00 pm to 11:30 pm,Not Booked,Not Booked,Booked,Not Booked,17 Sep 23:02
-17 Sep 2026,Thu,11:30 pm to 12:00 am,Not Booked,Not Booked,Not Booked,Not Booked,17 Sep 23:32
+Date,Day,Slot Time,Court 1,Court 2,Court 3,Last checked
+18 Sep 2026,Fri,5:00 am to 5:30 am,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,5:30 am to 6:00 am,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,6:00 am to 6:30 am,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,6:30 am to 7:00 am,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,7:00 am to 7:30 am,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,7:30 am to 8:00 am,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,8:00 am to 8:30 am,,,,
+18 Sep 2026,Fri,8:30 am to 9:00 am,,,,
+18 Sep 2026,Fri,9:00 am to 9:30 am,,,,
+18 Sep 2026,Fri,9:30 am to 10:00 am,,,,
+18 Sep 2026,Fri,10:00 am to 10:30 am,,,,
+18 Sep 2026,Fri,10:30 am to 11:00 am,,,,
+18 Sep 2026,Fri,11:00 am to 11:30 am,,,,
+18 Sep 2026,Fri,11:30 am to 12:00 pm,,,,
+18 Sep 2026,Fri,12:00 pm to 12:30 pm,Not Booked,Not Booked,,18 Sep 00:34
+18 Sep 2026,Fri,12:30 pm to 1:00 pm,Not Booked,Not Booked,,18 Sep 00:34
+18 Sep 2026,Fri,1:00 pm to 1:30 pm,Not Booked,Not Booked,,18 Sep 00:34
+18 Sep 2026,Fri,1:30 pm to 2:00 pm,Not Booked,Not Booked,,18 Sep 00:34
+18 Sep 2026,Fri,2:00 pm to 2:30 pm,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,2:30 pm to 3:00 pm,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,3:00 pm to 3:30 pm,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,3:30 pm to 4:00 pm,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,4:00 pm to 4:30 pm,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,4:30 pm to 5:00 pm,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,5:00 pm to 5:30 pm,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,5:30 pm to 6:00 pm,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,6:00 pm to 6:30 pm,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,6:30 pm to 7:00 pm,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,7:00 pm to 7:30 pm,Not Booked,Not Booked,Booked,18 Sep 00:34
+18 Sep 2026,Fri,7:30 pm to 8:00 pm,Not Booked,Not Booked,Booked,18 Sep 00:34
+18 Sep 2026,Fri,8:00 pm to 8:30 pm,Not Booked,Not Booked,Booked,18 Sep 00:34
+18 Sep 2026,Fri,8:30 pm to 9:00 pm,Not Booked,Not Booked,Booked,18 Sep 00:34
+18 Sep 2026,Fri,9:00 pm to 9:30 pm,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,9:30 pm to 10:00 pm,Not Booked,Not Booked,Not Booked,18 Sep 00:34
+18 Sep 2026,Fri,10:00 pm to 10:30 pm,Not Booked,Not Booked,Booked,18 Sep 00:34
+18 Sep 2026,Fri,10:30 pm to 11:00 pm,Not Booked,Not Booked,Booked,18 Sep 00:34
+18 Sep 2026,Fri,11:00 pm to 11:30 pm,Not Booked,Not Booked,Booked,18 Sep 00:34
+18 Sep 2026,Fri,11:30 pm to 12:00 am,Not Booked,Not Booked,Not Booked,18 Sep 00:34
