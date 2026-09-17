@@ -541,7 +541,11 @@ async def scrape_venue(page, url: str, sports, wanted, today: dt.date, log):
                     fresh_needed = True
                     continue
 
-                avail = sum(1 for s in slots if s["status"] == "Available")
+                # "Filling fast" is still bookable, so it counts as available.
+                # Counting only "Available" made Apex read "0 available" on a
+                # day when all 12 of its slots were open — just marked as
+                # filling fast. That reads as a failure when it is not one.
+                avail = sum(1 for s in slots if s["status"] in FREE)
                 if covered >= len(wanted):
                     short = ""
                 elif reason in ("venue limit", "no next button"):
@@ -805,7 +809,7 @@ def write_workbook(data, changes, path, today, days, sports, time_filter=None,
     n_courts = sum(len(v["courts"]) for v in data)
     n_slots = sum(len(c["slots"]) for v in data for c in v["courts"])
     n_open = sum(1 for v in data for c in v["courts"]
-                 for s in c["slots"] if s["status"] == "Available")
+                 for s in c["slots"] if s["status"] in FREE)
     info = [
         ("Hudle court availability — Noida", title),
         ("", body),
@@ -1701,7 +1705,12 @@ async def main():
                         w.writerow([f"{dd:%d %b %Y}", f"{dd:%a}", time_range(t, mins)]
                                    + vals + [checked])
                         n += 1
-            index.append((v["venue"], f"output/venues/{slug}.csv", len(courts), n))
+            # The folder name has to come from where we are ACTUALLY writing.
+            # Hardcoding "output" sent the tennis index pointing at pickleball's
+            # folder, and every formula built from it would have 404'd.
+            index.append((v["venue"],
+                          f"{os.path.basename(OUT_DIR.rstrip(os.sep))}/venues/{slug}.csv",
+                          len(courts), n))
 
         with open(os.path.join(vdir, "_index.csv"), "w", encoding="utf-8",
                   newline="") as fh:
