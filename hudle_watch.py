@@ -88,6 +88,32 @@ VENUE_URLS = [
 # "padel" here (or pass --sports pickleball,padel) if you ever want it too.
 DEFAULT_SPORTS = ["pickleball"]
 
+# Sports whose name is a substring of a DIFFERENT sport. Ask for "tennis" and a
+# plain substring test also drags in Table Tennis, which is a different game in
+# a different room. Listed here, those names are rejected outright.
+SPORT_NOT = {
+    "tennis": (" table tennis ", " soft tennis "),
+    "football": (" foot volley ",),
+}
+
+
+def sport_matches(activity_name: str, sports) -> bool:
+    """True if this Hudle activity is one of the sports we were asked for."""
+    words = re.sub(r"[^a-z0-9]+", " ", (activity_name or "").lower()).strip()
+    padded = f" {words} "
+    compact = words.replace(" ", "")
+    for s in sports:
+        s = (s or "").lower().strip()
+        if not s:
+            continue
+        if any(bad in padded for bad in SPORT_NOT.get(s, ())):
+            continue
+        # " tennis " matches "Lawn Tennis"; the compact test lets "pickleball"
+        # match a venue that writes it "Pickle Ball".
+        if f" {s} " in padded or s.replace(" ", "") in compact:
+            return True
+    return False
+
 # Equipment-rental entries that masquerade as facilities — skipped.
 RENTAL_RE = re.compile(r"\b(ball|racquet|racket)\b", re.I)
 
@@ -466,7 +492,7 @@ async def scrape_venue(page, url: str, sports, wanted, today: dt.date, log):
     vname = meta["name"]
     matching_acts = [
         (i, a) for i, a in enumerate(meta["activities"])
-        if any(s.lower() in a["name"].lower() for s in sports)
+        if sport_matches(a["name"], sports)
     ]
     if not matching_acts:
         log(f"    {vname}: no matching sport, skipped")
@@ -1405,6 +1431,13 @@ async def main():
                     help="comma-separated sport keywords (default: pickleball)")
     ap.add_argument("--only", default="",
                     help="comma-separated substrings; only matching venue URLs are checked")
+    ap.add_argument("--venues", default="",
+                    help="a text file of Hudle venue URLs, one per line, used "
+                         "instead of the built-in list. Blank lines and lines "
+                         "starting with # are ignored.")
+    ap.add_argument("--out", default="",
+                    help="folder to write results into (default: output). Give a "
+                         "second sport its own folder so the two never mix.")
     ap.add_argument("--headed", action="store_true", help="show the browser window")
     ap.add_argument("--workers", type=int, default=4,
                     help="how many venues to read at the same time (default 4). "
@@ -1413,6 +1446,28 @@ async def main():
     args = ap.parse_args()
 
     sports = [s.strip() for s in args.sports.split(",") if s.strip()]
+
+    # A second sport gets its own folder, so its history, workbook and CSVs are
+    # completely separate from pickleball's. Nothing is shared and neither run
+    # can damage the other's data.
+    global OUT_DIR, VENUE_URLS
+    if args.out:
+        OUT_DIR = args.out if os.path.isabs(args.out) else os.path.join(
+            os.path.dirname(os.path.abspath(__file__)), args.out)
+    if args.venues:
+        try:
+            with open(args.venues, encoding="utf-8") as fh:
+                urls = [ln.strip() for ln in fh]
+            urls = [u for u in urls if u and not u.startswith("#")]
+            if not urls:
+                print(f"{args.venues} has no venue URLs in it.")
+                return
+            VENUE_URLS = list(dict.fromkeys(urls))
+            print(f"Venue list: {len(VENUE_URLS)} from {args.venues}")
+        except OSError as e:
+            print(f"Could not read {args.venues}: {e}")
+            return
+
     today = dt.date.today()
     wanted_dates = parse_dates_arg(args.date, args.days, today)
     time_filter = parse_times_arg(args.time)
