@@ -1,17 +1,17 @@
-Hudle watch — 20 Sep 2026 08:47 — 26 venue(s), pickleball, dates: 20 Sep
+Hudle watch — 20 Sep 2026 09:13 — 26 venue(s), pickleball, dates: 20 Sep
 (within Hudle's 4-day window — no page-forward needed, so this is quick)
 Running 4 venues at a time.
 [1/26] arena-44
 [2/26] playall-bsic-noida-46
 [3/26] zyng-gallant-sports-arena
 [4/26] downtown-pickleball-sector-37
-    Zyng Gallant Sports Arena / Pickleball (Outdoor) / Pickleball Courts (Outdoor): 36 slots, 12 available
     Arena 44 / Pickleball (Outdoor) / Hardy's Court 1: 34 slots, 26 available
+    Zyng Gallant Sports Arena / Pickleball (Outdoor) / Pickleball Courts (Outdoor): 36 slots, 12 available
 [5/26] spodium-arena
-    PlayAll BSIC Noida 46 / Pickleball (Outdoor) / Court 1: 36 slots, 28 available
-    Downtown Pickleball | Sector 37 / Pickleball / Pickleball Court: 17 slots, 11 available
+    PlayAll BSIC Noida 46 / Pickleball (Outdoor) / Court 1: 36 slots, 27 available
+    Downtown Pickleball | Sector 37 / Pickleball / Pickleball Court: 17 slots, 10 available
 [6/26] crickdome
-    Arena 44 / Pickleball (Outdoor) / Hardy's Court 2: 34 slots, 24 available
+    Arena 44 / Pickleball (Outdoor) / Hardy's Court 2: 34 slots, 23 available
       (retrying Court 2 — grid did not render)
       (retrying Court 1 — grid did not render)
       (retrying Hardy's Court 3 — grid did not render)
@@ -20,183 +20,175 @@ Running 4 venues at a time.
       (retrying Court 1 — grid did not render)
       (retrying Hardy's Court 3 — grid did not render)
       (retrying Court 1 — grid did not render)
-    Spodium Arena | Sector 29 / Pickleball (Outdoor) / Court 1: 38 slots, 28 available
-    ! Arena 44 / Hardy's Court 3: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
-    PlayAll BSIC Noida 46 / Pickleball (Outdoor) / Court 2: 36 slots, 29 available
-    Crickdome / Pickleball / Court 1: 40 slots, 31 available
-    Spodium Arena | Sector 29 / Pickleball (Outdoor) / Court 2: 38 slots, 31 available
-    Arena 44 / Pickleball (Outdoor) / Hardy's Court 4: 34 slots, 29 available
-      (retrying Court 3 — grid did not render)
-      (retrying Court 2 — grid did not render)
-      (retrying Court 1 — grid did not render)
-      (retrying Court 3 — grid did not render)
-      (retrying Court 3 — grid did not render)
-      (retrying Court 2 — grid did not render)
-      (retrying Court 1 — grid did not render)
-      (retrying Court 3 — grid did not render)
-    ! Crickdome / Court 2: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
+    Spodium Arena | Sector 29 / Pickleball (Outdoor) / Court 1: 38 slots, 27 available
+    ! Crickdome / Court 1: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
+    PlayAll BSIC Noida 46 / Pickleball (Outdoor) / Court 2: 36 slots, 28 available
+    Arena 44 / Pickleball (Outdoor) / Hardy's Court 3: 34 slots, 22 available
+    Spodium Arena | Sector 29 / Pickleball (Outdoor) / Court 2: 38 slots, 30 available
+    Crickdome / Pickleball / Court 2: 40 slots, 30 available
 [7/26] anandmay-sports-club-sector-128
-    ! Spodium Arena | Sector 29 / Court 3: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
-    PlayAll BSIC Noida 46 / Pickleball (Outdoor) / Court 3: 36 slots, 29 available
+      (retrying Court 3 — grid did not render)
+      (retrying Hardy's Court 4 — grid did not render)
+      (retrying Court 3 — grid did not render)
+      (retrying Court 1 — grid did not render)
+      (retrying Court 3 — grid did not render)
+      (retrying Hardy's Court 4 — grid did not render)
+      (retrying Court 3 — grid did not render)
+      (retrying Court 1 — grid did not render)
+    Arena 44 / Pickleball (Outdoor) / Hardy's Court 4: 34 slots, 28 available
+    PlayAll BSIC Noida 46 / Pickleball (Outdoor) / Court 3: 36 slots, 28 available
 [8/26] playall-box-cricket-arena-sector-105-noida
+    Spodium Arena | Sector 29 / Pickleball (Outdoor) / Court 3: 38 slots, 24 available
+    Anandmay Sports Club | Sector 128 / Pickleball / Court 1: 48 slots, 30 available
     Arena 44 / Pickleball (Indoor) / Court 1: 34 slots, 23 available
-    Anandmay Sports Club | Sector 128 / Pickleball / Court 1: 48 slots, 31 available
-    Spodium Arena | Sector 29 / Pickleball (Outdoor) / Court 4: 38 slots, 31 available
-[9/26] noida-indoor-stadium
-    Arena 44 / Pickleball (Indoor) / Court 2: 34 slots, 26 available
+      (retrying Court 4 — grid did not render)
       (retrying Court 1 — grid did not render)
       (retrying Court 2 — grid did not render)
-      (retrying Court 1 — grid did not render)
-      (retrying Court 3 — grid did not render)
+      (retrying Court 2 — grid did not render)
+      (retrying Court 4 — grid did not render)
       (retrying Court 1 — grid did not render)
       (retrying Court 2 — grid did not render)
-      (retrying Court 1 — grid did not render)
-      (retrying Court 3 — grid did not render)
+      (retrying Court 2 — grid did not render)
     ! PlayAll Noida 105 / Court 1: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
-    Anandmay Sports Club | Sector 128 / Pickleball / Court 2: 48 slots, 31 available
-    note: all 2 courts at Anandmay Sports Club | Sector 128 have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
-[10/26] spuddy-multisports-academy-noida
-    ! Noida Indoor Stadium / Court 1: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
-    ! Arena 44 / Court 3: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
-[11/26] noida-pickleball-courts
-    PlayAll Noida 105 / Pickleball (Outdoor) / Court 2: 38 slots, 31 available
-    Spuddy Multisports Academy | Noida / Pickleball / Pickleball (Indoor): 19 slots, 15 available
-[12/26] sky-nine-rackets
-    Noida Indoor Stadium / Pickleball / Court 2: 18 slots, 2 available
-    Noida Pickleball Courts | Sec-100 / Pickleball / Court 1: 36 slots, 31 available
-      (retrying Court 3 — grid did not render)
-      (retrying Court 3 — grid did not render)
-      (retrying Court 1 — grid did not render)
-      (retrying Court 2 — grid did not render)
-      (retrying Court 3 — grid did not render)
+    ! Anandmay Sports Club | Sector 128 / Court 2: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
+[9/26] spuddy-multisports-academy-noida
+    Spodium Arena | Sector 29 / Pickleball (Outdoor) / Court 4: 38 slots, 30 available
+    ! Arena 44 / Court 2: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
+[10/26] noida-indoor-stadium
+    Spuddy Multisports Academy | Noida / Pickleball / Pickleball (Indoor): 19 slots, 14 available
+[11/26] sky-nine-rackets
+    Arena 44 / Pickleball (Indoor) / Court 3: 34 slots, 28 available
+[12/26] noida-pickleball-courts
+    PlayAll Noida 105 / Pickleball (Outdoor) / Court 2: 38 slots, 30 available
+    Noida Indoor Stadium / Pickleball / Court 1: 18 slots, 2 available
       (retrying Court 3 — grid did not render)
       (retrying Court 1 — grid did not render)
       (retrying Court 2 — grid did not render)
-    ! Noida Indoor Stadium / Court 3: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
-[13/26] play-all-modern-school-noida
-    ! Noida Pickleball Courts | Sec-100 / Court 2: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
-[14/26] gd-goenka-sports-arena
-    Sky Nine Rackets / Pickleball / Court 1: 40 slots, 31 available
-    PlayAll Noida 105 / Pickleball (Outdoor) / Court 3: 38 slots, 31 available
+      (retrying Court 1 — grid did not render)
+      (retrying Court 3 — grid did not render)
+      (retrying Court 1 — grid did not render)
+      (retrying Court 2 — grid did not render)
+      (retrying Court 1 — grid did not render)
+    ! Sky Nine Rackets / Court 1: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
+    ! Noida Indoor Stadium / Court 2: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
+    ! Noida Pickleball Courts | Sec-100 / Court 1: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
+    PlayAll Noida 105 / Pickleball (Outdoor) / Court 3: 38 slots, 30 available
     note: all 2 courts at PlayAll Noida 105 have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
-[15/26] pickle-pros-noida
-    Sky Nine Rackets / Pickleball / Court 2: 40 slots, 31 available
-    CoPlay | Sec 50 Noida / Pickleball (Outdoor) / Court 1: 34 slots, 6 available
-    PlayAll MPS Noida 11 / Pickleball / Court 1: 38 slots, 31 available
+[13/26] pickle-pros-noida
+    Sky Nine Rackets / Pickleball / Court 2: 40 slots, 30 available
+    Noida Indoor Stadium / Pickleball / Court 3: 18 slots, 2 available
+    note: all 2 courts at Noida Indoor Stadium have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
+    Noida Pickleball Courts | Sec-100 / Pickleball / Court 2: 36 slots, 30 available
+[14/26] play-all-modern-school-noida
+[15/26] gd-goenka-sports-arena
+    Sky Nine Rackets / Pickleball / Court 3: 40 slots, 30 available
       (retrying Pickleball Court 1 — grid did not render)
-      (retrying Court 3 — grid did not render)
-      (retrying Court 2 — grid did not render)
-      (retrying Court 2 — grid did not render)
+      (retrying Court 1 — grid did not render)
+      (retrying Court 1 — grid did not render)
+      (retrying Court 4 — grid did not render)
       (retrying Pickleball Court 1 — grid did not render)
+      (retrying Court 1 — grid did not render)
+      (retrying Court 1 — grid did not render)
+      (retrying Court 4 — grid did not render)
+    ! PlayAll MPS Noida 11 / Court 1: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
+    ! CoPlay | Sec 50 Noida / Court 1: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
+    Pickle Pros | Noida / Pickleball (Outdoor) / Pickleball Court 1: 38 slots, 25 available
+    Sky Nine Rackets / Pickleball / Court 4: 40 slots, 30 available
+    CoPlay | Sec 50 Noida / Pickleball (Outdoor) / Court 2: 34 slots, 6 available
+    Pickle Pros | Noida / Pickleball (Outdoor) / Pickleball Court 2: 38 slots, 27 available
+    PlayAll MPS Noida 11 / Pickleball / Court 2: 38 slots, 30 available
+      (retrying Court 5 — grid did not render)
       (retrying Court 3 — grid did not render)
-      (retrying Court 2 — grid did not render)
-      (retrying Court 2 — grid did not render)
-    Pickle Pros | Noida / Pickleball (Outdoor) / Pickleball Court 1: 38 slots, 26 available
-    ! PlayAll MPS Noida 11 / Court 2: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
-    ! CoPlay | Sec 50 Noida / Court 2: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
-    Sky Nine Rackets / Pickleball / Court 3: 40 slots, 31 available
-    Pickle Pros | Noida / Pickleball (Outdoor) / Pickleball Court 2: 38 slots, 28 available
-    CoPlay | Sec 50 Noida / Pickleball (Outdoor) / Court 3: 34 slots, 6 available
-    note: all 2 courts at CoPlay | Sec 50 Noida have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
+      (retrying Pickleball Court 3 — grid did not render)
+      (retrying Court 3 — grid did not render)
+      (retrying Court 5 — grid did not render)
+      (retrying Court 3 — grid did not render)
+      (retrying Pickleball Court 3 — grid did not render)
+      (retrying Court 3 — grid did not render)
+    ! CoPlay | Sec 50 Noida / Court 3: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
 [16/26] playall-badminton-arena
-    PlayAll MPS Noida 11 / Pickleball / Court 3: 38 slots, 31 available
-    note: all 2 courts at PlayAll MPS Noida 11 have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
-[17/26] pickleflow-social
-      (retrying Court 4 — grid did not render)
-      (retrying Pickleball Court 3 — grid did not render)
-      (retrying Court 1 — grid did not render)
-      (retrying Court 1 — grid did not render)
-      (retrying Court 4 — grid did not render)
-      (retrying Pickleball Court 3 — grid did not render)
-      (retrying Court 1 — grid did not render)
-      (retrying Court 1 — grid did not render)
-    Sky Nine Rackets / Pickleball / Court 4: 40 slots, 31 available
-    Pickle Pros | Noida / Pickleball (Outdoor) / Pickleball Court 3: 38 slots, 28 available
-    Sky Nine Rackets / Pickleball / Court 5: 40 slots, 31 available
-    note: all 5 courts at Sky Nine Rackets have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
-[18/26] the-box-cage
-    Pickleflow Social / Pickleball Court (Indoor) / Court 1: 48 slots, 25 available
-    PlayAll Noida 73 / Pickleball (Outdoor) / Court 1: 38 slots, 31 available
-      (retrying Pickleball Court 4 — grid did not render)
-      (retrying Court 1 — grid did not render)
-      (retrying Court 2 — grid did not render)
-      (retrying Court 2 — grid did not render)
-      (retrying Pickleball Court 4 — grid did not render)
-      (retrying Court 1 — grid did not render)
-      (retrying Court 2 — grid did not render)
-      (retrying Court 2 — grid did not render)
-    Pickle Pros | Noida / Pickleball (Outdoor) / Pickleball Court 4: 38 slots, 28 available
+    ! Pickle Pros | Noida / Pickleball Court 3: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
+    Sky Nine Rackets / Pickleball / Court 5: 40 slots, 30 available
+    note: all 4 courts at Sky Nine Rackets have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
+[17/26] the-box-cage
+    ! PlayAll MPS Noida 11 / Court 3: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
+[18/26] pickleflow-social
+    Pickle Pros | Noida / Pickleball (Outdoor) / Pickleball Court 4: 38 slots, 27 available
 [19/26] dinking-zone-one29
+    The Box Cage / Pickleball (Outdoor) / Court 1: 48 slots, 30 available
+    Pickleflow Social / Pickleball Court (Indoor) / Court 1: 48 slots, 24 available
+    PlayAll Noida 73 / Pickleball (Outdoor) / Court 1: 38 slots, 30 available
+      (retrying Court 1 — grid did not render)
+      (retrying Court 2 — grid did not render)
+      (retrying Court 2 — grid did not render)
+      (retrying Court 2 — grid did not render)
+      (retrying Court 1 — grid did not render)
+      (retrying Court 2 — grid did not render)
+      (retrying Court 2 — grid did not render)
+      (retrying Court 2 — grid did not render)
+    ! The Box Cage / Court 2: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
     ! Pickleflow Social / Court 2: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
-    The Box Cage / Pickleball (Outdoor) / Court 1: 48 slots, 31 available
+    ! PlayAll Noida 73 / Court 2: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
     Dinking Zone One29 / Pickleball (Outdoor) / Court 1: 48 slots, 14 available
-    Pickleflow Social / Pickleball Court (Indoor) / Court 3: 48 slots, 25 available
+    The Box Cage / Pickleball (Outdoor) / Court 3: 48 slots, 30 available
+    Pickleflow Social / Pickleball Court (Indoor) / Court 3: 48 slots, 24 available
     note: all 2 courts at Pickleflow Social have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
 [20/26] pitch-please-box-cricket-football
-    PlayAll Noida 73 / Pickleball (Outdoor) / Court 2: 38 slots, 28 available
-      (retrying Court 2 — grid did not render)
-      (retrying Court 2 — grid did not render)
-      (retrying Court 1 — grid did not render)
-      (retrying Court 3 — grid did not render)
-      (retrying Court 2 — grid did not render)
-      (retrying Court 2 — grid did not render)
-      (retrying Court 3 — grid did not render)
-      (retrying Court 1 — grid did not render)
-    The Box Cage / Pickleball (Outdoor) / Court 2: 48 slots, 31 available
     Dinking Zone One29 / Pickleball (Outdoor) / Court 2: 48 slots, 14 available
-    ! PlayAll Noida 73 / Court 3: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
-    The Box Cage / Pickleball (Outdoor) / Court 3: 48 slots, 31 available
-    Pitch Please X TSG Sports Arena / Pickleball (Outdoor) / Court 1: 28 slots, 18 available
+    PlayAll Noida 73 / Pickleball (Outdoor) / Court 3: 38 slots, 30 available
+      (retrying Court 4 — grid did not render)
+      (retrying Court 3 — grid did not render)
+      (retrying Court 1 — grid did not render)
+      (retrying Court 4 — grid did not render)
+      (retrying Court 4 — grid did not render)
+      (retrying Court 3 — grid did not render)
+      (retrying Court 1 — grid did not render)
+      (retrying Court 4 — grid did not render)
+    The Box Cage / Pickleball (Outdoor) / Court 4: 48 slots, 30 available
+    note: all 3 courts at The Box Cage have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
+    ! Pitch Please X TSG Sports Arena / Court 1: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
     Dinking Zone One29 / Pickleball (Outdoor) / Court 3: 48 slots, 14 available
     note: all 3 courts at Dinking Zone One29 have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
+    ! PlayAll Noida 73 / Court 4: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
+    note: all 2 courts at PlayAll Noida 73 have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
 [21/26] pickit-vijay-sri-academy
-      (retrying Court 4 — grid did not render)
-      (retrying Court 4 — grid did not render)
-      (retrying Court 2 — grid did not render)
-      (retrying Court 1 — grid did not render)
-      (retrying Court 4 — grid did not render)
-      (retrying Court 4 — grid did not render)
-      (retrying Court 2 — grid did not render)
-      (retrying Court 1 — grid did not render)
-    ! Pitch Please X TSG Sports Arena / Court 2: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
-    The Box Cage / Pickleball (Outdoor) / Court 4: 48 slots, 30 available
-    PlayAll Noida 73 / Pickleball (Outdoor) / Court 4: 38 slots, 0 available
 [22/26] coplay-rise-sec-73-noida
-    ! Pickit | Vijay Sri Academy / Court 1: could not confirm this court was selected (wizard showed None) — SKIPPED rather than reporting another court's slots under this name
-    Pickit | Vijay Sri Academy / Pickleball / Court 2: 18 slots, 15 available
+    Pitch Please X TSG Sports Arena / Pickleball (Outdoor) / Court 2: 28 slots, 17 available
+    Pickit | Vijay Sri Academy / Pickleball / Court 1: 18 slots, 15 available
     CoPlay RISE | Sec 73 Noida / Pickleball (Outdoor) / Court 1: 38 slots, 30 available
-    Pickit | Vijay Sri Academy / Pickleball / Court 3: 18 slots, 15 available
-    note: all 2 courts at Pickit | Vijay Sri Academy have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
-[23/26] rally-n-roast-sector-141
       (retrying Court 2 — grid did not render)
-      (retrying Court 1 (Blue) — grid did not render)
       (retrying Court 2 — grid did not render)
-      (retrying Court 1 (Blue) — grid did not render)
+      (retrying Court 2 — grid did not render)
+      (retrying Court 2 — grid did not render)
+    Pickit | Vijay Sri Academy / Pickleball / Court 2: 18 slots, 15 available
     CoPlay RISE | Sec 73 Noida / Pickleball (Outdoor) / Court 2: 38 slots, 30 available
     note: all 2 courts at CoPlay RISE | Sec 73 Noida have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
-[24/26] pickleplay-121
-    Rally N Roast | Sector 141 / Pickleball (Outdoor) / Court 1 (Blue): 36 slots, 28 available
+[23/26] pickleplay-121
+    Pickit | Vijay Sri Academy / Pickleball / Court 3: 18 slots, 15 available
+    note: all 3 courts at Pickit | Vijay Sri Academy have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
+[24/26] rally-n-roast-sector-141
     Pickleplay 121 | Indoor Arena / Pickleball Court (Indoor) / Court 1: 20 slots, 14 available
-    Rally N Roast | Sector 141 / Pickleball (Outdoor) / Court 2 (Pink): 36 slots, 28 available
+    Rally N Roast | Sector 141 / Pickleball (Outdoor) / Court 1 (Blue): 36 slots, 28 available
+      (retrying Court 2 — grid did not render)
+      (retrying Court 2 (Pink) — grid did not render)
+      (retrying Court 2 — grid did not render)
+      (retrying Court 2 (Pink) — grid did not render)
     Pickleplay 121 | Indoor Arena / Pickleball Court (Indoor) / Court 2: 20 slots, 15 available
-      (retrying Court 3 (Blue) — grid did not render)
-      (retrying Court 3 — grid did not render)
-      (retrying Court 3 (Blue) — grid did not render)
-      (retrying Court 3 — grid did not render)
+    Pickleplay 121 | Indoor Arena / Pickleball Court (Indoor) / Court 3: 20 slots, 13 available
+    Rally N Roast | Sector 141 / Pickleball (Outdoor) / Court 2 (Pink): 36 slots, 28 available
+[25/26] heat-sports-arena-150
     Rally N Roast | Sector 141 / Pickleball (Outdoor) / Court 3 (Blue): 36 slots, 28 available
     note: all 3 courts at Rally N Roast | Sector 141 have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
-[25/26] playlife
-    Pickleplay 121 | Indoor Arena / Pickleball Court (Indoor) / Court 3: 20 slots, 13 available
-[26/26] heat-sports-arena-150
-    PlayLife | Sector 163 / Pickleball / Pickleball Court 1: 34 slots, 28 available
+[26/26] playlife
     Heat Sports Arena 150 / Pickleball (Outdoor) / Court 1: 48 slots, 30 available
-    PlayLife | Sector 163 / Pickleball / Pickleball Court 2: 34 slots, 28 available
       (retrying Court 2 — grid did not render)
-      (retrying Pickleball Court 3 — grid did not render)
+      (retrying Pickleball Court 1 — grid did not render)
       (retrying Court 2 — grid did not render)
-      (retrying Pickleball Court 3 — grid did not render)
+      (retrying Pickleball Court 1 — grid did not render)
     Heat Sports Arena 150 / Pickleball (Outdoor) / Court 2: 48 slots, 30 available
     note: all 2 courts at Heat Sports Arena 150 have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
+    PlayLife | Sector 163 / Pickleball / Pickleball Court 1: 34 slots, 28 available
+    PlayLife | Sector 163 / Pickleball / Pickleball Court 2: 34 slots, 28 available
     PlayLife | Sector 163 / Pickleball / Pickleball Court 3: 34 slots, 28 available
     note: all 3 courts at PlayLife | Sector 163 have identical availability. Normal at a quiet venue — worth a spot-check on the site if it persists when the venue is busy.
 CSV rows: 2,370  ->  /home/runner/work/hudle-watch/hudle-watch/output/latest.csv
@@ -210,4 +202,4 @@ Archive: 14,763 rows across 8 day(s) -> /home/runner/work/hudle-watch/hudle-watc
 
 2,312 slots open across 76 courts (1 date(s) held in history).
 No changes since last run.
-Workbook: /home/runner/work/hudle-watch/hudle-watch/output/courts_2026-09-20_0904.xlsx
+Workbook: /home/runner/work/hudle-watch/hudle-watch/output/courts_2026-09-20_0929.xlsx
