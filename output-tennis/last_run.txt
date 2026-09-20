@@ -1,18 +1,18 @@
-Hudle watch — 20 Sep 2026 16:52 — 6 venue(s), tennis, dates: 20 Sep
+Hudle watch — 20 Sep 2026 17:18 — 6 venue(s), tennis, dates: 20 Sep
 (within Hudle's 4-day window — no page-forward needed, so this is quick)
 Running 4 venues at a time.
 [1/6] way-to-slam-tennis-academy
 [2/6] apex-sports-academy-noida
 [3/6] spodium-arena
-    Apex Sports Academy | Noida / Tennis (Clay Courts) / Tennis (Clay Courts): 12 slots, 5 available
+    Apex Sports Academy | Noida / Tennis (Clay Courts) / Tennis (Clay Courts): 12 slots, 4 available
 [4/6] ramagya-sports-academy
-    Way To Slams Tennis Academy / Tennis (Clay Courts) / Tennis (Clay Courts): 48 slots, 15 available
-    Ramagya Sports Academy: no matching sport, skipped
+    Way To Slams Tennis Academy / Tennis (Clay Courts) / Tennis (Clay Courts): 48 slots, 14 available
 [5/6] global-sports-complex-noida
+    Ramagya Sports Academy: no matching sport, skipped
 [6/6] indrayu-jeta-sports-noida
-    Spodium Arena | Sector 29 / Tennis (Clay Court) / Tennis Court (Clay): 38 slots, 15 available
-    Global Sports Complex | Noida / Tennis (Synthetic Court) / Tennis Court: 38 slots, 1 available
-    Indrayu Jeta Sports | Noida / Tennis (Acrylic Court) / Tennis (Acrylic Court): 16 slots, 3 available
+    Spodium Arena | Sector 29 / Tennis (Clay Court) / Tennis Court (Clay): 38 slots, 14 available
+    Global Sports Complex | Noida / Tennis (Synthetic Court) / Tennis Court: 38 slots, 0 available
+    Indrayu Jeta Sports | Noida / Tennis (Acrylic Court) / Tennis (Acrylic Court): 16 slots, 2 available
 CSV rows: 125  ->  /home/runner/work/hudle-watch/hudle-watch/output-tennis/latest.csv
 Grid rows: 48  x 5 courts  ->  /home/runner/work/hudle-watch/hudle-watch/output-tennis/grid.csv
 Per-venue sheets: 5 files -> /home/runner/work/hudle-watch/hudle-watch/output-tennis/venues
@@ -23,4 +23,4 @@ Archive: 321 rows across 3 day(s) -> /home/runner/work/hudle-watch/hudle-watch/o
 
 119 slots open across 5 courts (1 date(s) held in history).
 No changes since last run.
-Workbook: /home/runner/work/hudle-watch/hudle-watch/output-tennis/courts_2026-09-20_1653.xlsx
+Workbook: /home/runner/work/hudle-watch/hudle-watch/output-tennis/courts_2026-09-20_1718.xlsx
