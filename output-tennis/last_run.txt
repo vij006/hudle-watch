@@ -1,4 +1,4 @@
-Hudle watch — 21 Sep 2026 17:58 — 6 venue(s), tennis, dates: 21 Sep
+Hudle watch — 21 Sep 2026 18:22 — 6 venue(s), tennis, dates: 21 Sep
 (within Hudle's 4-day window — no page-forward needed, so this is quick)
 Running 4 venues at a time.
 [1/6] way-to-slam-tennis-academy
@@ -23,6 +23,5 @@ Day grid: /home/runner/work/hudle-watch/hudle-watch/output-tennis/byday/day3.csv
 Archive: 412 rows across 4 day(s) -> /home/runner/work/hudle-watch/hudle-watch/output-tennis/archive.csv
 
 87 slots open across 5 courts (1 date(s) held in history).
-1 slot(s) opened up, 0 got taken since last run.
-  OPEN  2026-09-21 Mon 07:00 PM  Indrayu Jeta Sports | Noida · Tennis (Acrylic Court)
-Workbook: /home/runner/work/hudle-watch/hudle-watch/output-tennis/courts_2026-09-21_1758.xlsx
+No changes since last run.
+Workbook: /home/runner/work/hudle-watch/hudle-watch/output-tennis/courts_2026-09-21_1822.xlsx
