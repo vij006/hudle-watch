@@ -326,7 +326,7 @@ Date,Day,Slot Time,Venue,Court,Status,Price,Last checked
 2026-09-21,Mon,1:00 pm to 2:00 pm,Apex Sports Academy | Noida,Tennis (Clay Courts),Filling Fast,400,21 Sep 13:57
 2026-09-21,Mon,2:00 pm to 3:00 pm,Apex Sports Academy | Noida,Tennis (Clay Courts),Filling Fast,400,21 Sep 14:56
 2026-09-21,Mon,3:00 pm to 4:00 pm,Apex Sports Academy | Noida,Tennis (Clay Courts),Filling Fast,400,21 Sep 15:55
-2026-09-21,Mon,8:00 pm to 9:00 pm,Apex Sports Academy | Noida,Tennis (Clay Courts),Filling Fast,400,21 Sep 19:55
+2026-09-21,Mon,8:00 pm to 9:00 pm,Apex Sports Academy | Noida,Tennis (Clay Courts),Filling Fast,400,21 Sep 20:22
 2026-09-21,Mon,9:00 am to 10:00 am,Apex Sports Academy | Noida,Tennis (Clay Courts),Filling Fast,400,21 Sep 09:56
 2026-09-21,Mon,10:00 am to 10:30 am,Global Sports Complex | Noida,Tennis Court,Not Booked,300,21 Sep 10:23
 2026-09-21,Mon,10:30 am to 11:00 am,Global Sports Complex | Noida,Tennis Court,Not Booked,300,21 Sep 10:54
@@ -346,11 +346,11 @@ Date,Day,Slot Time,Venue,Court,Status,Price,Last checked
 2026-09-21,Mon,6:00 am to 7:00 am,Indrayu Jeta Sports | Noida,Tennis (Acrylic Court),Not Booked,222,21 Sep 06:55
 2026-09-21,Mon,6:00 pm to 7:00 pm,Indrayu Jeta Sports | Noida,Tennis (Acrylic Court),Booked,222,21 Sep 18:54
 2026-09-21,Mon,7:00 pm to 8:00 pm,Indrayu Jeta Sports | Noida,Tennis (Acrylic Court),Not Booked,222,21 Sep 19:55
-2026-09-21,Mon,8:00 pm to 9:00 pm,Indrayu Jeta Sports | Noida,Tennis (Acrylic Court),Booked,222,21 Sep 19:55
-2026-09-21,Mon,10:00 pm to 10:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 19:55
-2026-09-21,Mon,10:30 pm to 11:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 19:55
-2026-09-21,Mon,11:00 pm to 11:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 19:55
-2026-09-21,Mon,11:30 pm to 12:00 am,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 19:55
+2026-09-21,Mon,8:00 pm to 9:00 pm,Indrayu Jeta Sports | Noida,Tennis (Acrylic Court),Booked,222,21 Sep 20:22
+2026-09-21,Mon,10:00 pm to 10:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 20:22
+2026-09-21,Mon,10:30 pm to 11:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 20:22
+2026-09-21,Mon,11:00 pm to 11:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 20:22
+2026-09-21,Mon,11:30 pm to 12:00 am,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 20:22
 2026-09-21,Mon,12:00 pm to 12:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 12:26
 2026-09-21,Mon,12:30 pm to 1:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 12:58
 2026-09-21,Mon,1:00 pm to 1:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 13:22
@@ -369,18 +369,18 @@ Date,Day,Slot Time,Venue,Court,Status,Price,Last checked
 2026-09-21,Mon,7:00 am to 7:30 am,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 07:21
 2026-09-21,Mon,7:30 am to 8:00 am,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 07:55
 2026-09-21,Mon,7:30 pm to 8:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 19:55
-2026-09-21,Mon,8:00 pm to 8:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Booked,199,21 Sep 19:55
-2026-09-21,Mon,8:30 pm to 9:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Booked,199,21 Sep 19:55
-2026-09-21,Mon,9:00 pm to 9:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 19:55
-2026-09-21,Mon,9:30 pm to 10:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 19:55
+2026-09-21,Mon,8:00 pm to 8:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Booked,199,21 Sep 20:22
+2026-09-21,Mon,8:30 pm to 9:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Booked,199,21 Sep 20:22
+2026-09-21,Mon,9:00 pm to 9:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 20:22
+2026-09-21,Mon,9:30 pm to 10:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,21 Sep 20:22
 2026-09-21,Mon,10:00 am to 10:30 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,150,21 Sep 10:23
-2026-09-21,Mon,10:00 pm to 10:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 19:55
+2026-09-21,Mon,10:00 pm to 10:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 20:22
 2026-09-21,Mon,10:30 am to 11:00 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,150,21 Sep 10:54
-2026-09-21,Mon,10:30 pm to 11:00 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 19:55
+2026-09-21,Mon,10:30 pm to 11:00 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 20:22
 2026-09-21,Mon,11:00 am to 11:30 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,150,21 Sep 11:21
-2026-09-21,Mon,11:00 pm to 11:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 19:55
+2026-09-21,Mon,11:00 pm to 11:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 20:22
 2026-09-21,Mon,11:30 am to 12:00 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,150,21 Sep 11:21
-2026-09-21,Mon,11:30 pm to 12:00 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 19:55
+2026-09-21,Mon,11:30 pm to 12:00 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 20:22
 2026-09-21,Mon,12:00 am to 12:30 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 00:20
 2026-09-21,Mon,12:00 pm to 12:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,150,21 Sep 12:26
 2026-09-21,Mon,12:30 am to 1:00 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 00:51
@@ -405,9 +405,9 @@ Date,Day,Slot Time,Venue,Court,Status,Price,Last checked
 2026-09-21,Mon,6:00 am to 6:30 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 06:23
 2026-09-21,Mon,6:30 am to 7:00 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 06:55
 2026-09-21,Mon,7:30 pm to 8:00 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 19:55
-2026-09-21,Mon,8:00 pm to 8:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 19:55
-2026-09-21,Mon,8:30 pm to 9:00 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 19:55
+2026-09-21,Mon,8:00 pm to 8:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 20:22
+2026-09-21,Mon,8:30 pm to 9:00 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 20:22
 2026-09-21,Mon,9:00 am to 9:30 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,150,21 Sep 09:23
-2026-09-21,Mon,9:00 pm to 9:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 19:55
+2026-09-21,Mon,9:00 pm to 9:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 20:22
 2026-09-21,Mon,9:30 am to 10:00 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,150,21 Sep 09:56
-2026-09-21,Mon,9:30 pm to 10:00 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 19:55
+2026-09-21,Mon,9:30 pm to 10:00 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,21 Sep 20:22
