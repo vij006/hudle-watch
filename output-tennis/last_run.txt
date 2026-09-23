@@ -1,4 +1,4 @@
-Hudle watch — 23 Sep 2026 08:21 — 6 venue(s), tennis, dates: 23 Sep
+Hudle watch — 23 Sep 2026 08:55 — 6 venue(s), tennis, dates: 23 Sep
 (within Hudle's 4-day window — no page-forward needed, so this is quick)
 Running 4 venues at a time.
 [1/6] way-to-slam-tennis-academy
@@ -24,4 +24,4 @@ Archive: 594 rows across 6 day(s) -> /home/runner/work/hudle-watch/hudle-watch/o
 
 85 slots open across 5 courts (1 date(s) held in history).
 No changes since last run.
-Workbook: /home/runner/work/hudle-watch/hudle-watch/output-tennis/courts_2026-09-23_0821.xlsx
+Workbook: /home/runner/work/hudle-watch/hudle-watch/output-tennis/courts_2026-09-23_0855.xlsx
