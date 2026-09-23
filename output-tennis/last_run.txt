@@ -1,17 +1,17 @@
-Hudle watch — 23 Sep 2026 10:54 — 6 venue(s), tennis, dates: 23 Sep
+Hudle watch — 23 Sep 2026 11:21 — 6 venue(s), tennis, dates: 23 Sep
 (within Hudle's 4-day window — no page-forward needed, so this is quick)
 Running 4 venues at a time.
 [1/6] way-to-slam-tennis-academy
 [2/6] apex-sports-academy-noida
 [3/6] spodium-arena
-    Apex Sports Academy | Noida / Tennis (Clay Courts) / Tennis (Clay Courts): 12 slots, 6 available
+    Apex Sports Academy | Noida / Tennis (Clay Courts) / Tennis (Clay Courts): 12 slots, 5 available
 [4/6] ramagya-sports-academy
-    Way To Slams Tennis Academy / Tennis (Clay Courts) / Tennis (Clay Courts): 48 slots, 21 available
+    Way To Slams Tennis Academy / Tennis (Clay Courts) / Tennis (Clay Courts): 48 slots, 20 available
     Ramagya Sports Academy: no matching sport, skipped
-[5/6] indrayu-jeta-sports-noida
-[6/6] global-sports-complex-noida
+[5/6] global-sports-complex-noida
+[6/6] indrayu-jeta-sports-noida
     Spodium Arena | Sector 29 / Tennis (Clay Court) / Tennis Court (Clay): 38 slots, 16 available
-    Global Sports Complex | Noida / Tennis (Synthetic Court) / Tennis Court: 38 slots, 13 available
+    Global Sports Complex | Noida / Tennis (Synthetic Court) / Tennis Court: 38 slots, 12 available
     Indrayu Jeta Sports | Noida / Tennis (Acrylic Court) / Tennis (Acrylic Court): 16 slots, 2 available
 CSV rows: 85  ->  /home/runner/work/hudle-watch/hudle-watch/output-tennis/latest.csv
 Grid rows: 44  x 5 courts  ->  /home/runner/work/hudle-watch/hudle-watch/output-tennis/grid.csv
@@ -23,5 +23,5 @@ Day grid: /home/runner/work/hudle-watch/hudle-watch/output-tennis/byday/day3.csv
 Archive: 594 rows across 6 day(s) -> /home/runner/work/hudle-watch/hudle-watch/output-tennis/archive.csv
 
 84 slots open across 5 courts (1 date(s) held in history).
-0 slot(s) opened up, 1 got taken since last run.
-Workbook: /home/runner/work/hudle-watch/hudle-watch/output-tennis/courts_2026-09-23_1054.xlsx
+No changes since last run.
+Workbook: /home/runner/work/hudle-watch/hudle-watch/output-tennis/courts_2026-09-23_1121.xlsx
