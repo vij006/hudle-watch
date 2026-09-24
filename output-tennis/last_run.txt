@@ -1,4 +1,4 @@
-Hudle watch — 24 Sep 2026 18:57 — 6 venue(s), tennis, dates: 24 Sep
+Hudle watch — 24 Sep 2026 19:23 — 6 venue(s), tennis, dates: 24 Sep
 (within Hudle's 4-day window — no page-forward needed, so this is quick)
 Running 4 venues at a time.
 [1/6] way-to-slam-tennis-academy
@@ -6,8 +6,8 @@ Running 4 venues at a time.
 [3/6] spodium-arena
     Apex Sports Academy | Noida / Tennis (Clay Courts) / Tennis (Clay Courts): 12 slots, 0 available
 [4/6] ramagya-sports-academy
-    Ramagya Sports Academy: no matching sport, skipped
     Way To Slams Tennis Academy / Tennis (Clay Courts) / Tennis (Clay Courts): 48 slots, 9 available
+    Ramagya Sports Academy: no matching sport, skipped
 [5/6] indrayu-jeta-sports-noida
 [6/6] global-sports-complex-noida
     Spodium Arena | Sector 29 / Tennis (Clay Court) / Tennis Court (Clay): 38 slots, 8 available
@@ -23,5 +23,5 @@ Day grid: /home/runner/work/hudle-watch/hudle-watch/output-tennis/byday/day3.csv
 Archive: 679 rows across 7 day(s) -> /home/runner/work/hudle-watch/hudle-watch/output-tennis/archive.csv
 
 80 slots open across 5 courts (1 date(s) held in history).
-0 slot(s) opened up, 1 got taken since last run.
-Workbook: /home/runner/work/hudle-watch/hudle-watch/output-tennis/courts_2026-09-24_1857.xlsx
+No changes since last run.
+Workbook: /home/runner/work/hudle-watch/hudle-watch/output-tennis/courts_2026-09-24_1923.xlsx
