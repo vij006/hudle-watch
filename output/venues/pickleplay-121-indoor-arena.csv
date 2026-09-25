@@ -1,25 +1,25 @@
 Date,Day,Slot Time,Court 1,Court 2,Court 3,Last checked
-25 Sep 2026,Fri,12:00 am to 1:00 am,Not Booked,Not Booked,Not Booked,25 Sep 00:33
-25 Sep 2026,Fri,1:00 am to 2:00 am,,,,
-25 Sep 2026,Fri,2:00 am to 3:00 am,,,,
-25 Sep 2026,Fri,3:00 am to 4:00 am,,,,
-25 Sep 2026,Fri,4:00 am to 5:00 am,,,,
-25 Sep 2026,Fri,5:00 am to 6:00 am,,,,
-25 Sep 2026,Fri,6:00 am to 7:00 am,Not Booked,Not Booked,Not Booked,25 Sep 06:34
-25 Sep 2026,Fri,7:00 am to 8:00 am,Not Booked,Not Booked,Not Booked,25 Sep 07:30
-25 Sep 2026,Fri,8:00 am to 9:00 am,,Not Booked,Not Booked,25 Sep 08:30
-25 Sep 2026,Fri,9:00 am to 10:00 am,,Not Booked,Not Booked,25 Sep 09:30
-25 Sep 2026,Fri,10:00 am to 11:00 am,Not Booked,Not Booked,Not Booked,25 Sep 10:31
-25 Sep 2026,Fri,11:00 am to 12:00 pm,Not Booked,Not Booked,Not Booked,25 Sep 11:32
-25 Sep 2026,Fri,12:00 pm to 1:00 pm,Not Booked,Not Booked,Not Booked,25 Sep 12:38
-25 Sep 2026,Fri,1:00 pm to 2:00 pm,Not Booked,Not Booked,Not Booked,25 Sep 13:32
-25 Sep 2026,Fri,2:00 pm to 3:00 pm,Not Booked,Not Booked,Not Booked,25 Sep 14:33
-25 Sep 2026,Fri,3:00 pm to 4:00 pm,Not Booked,Not Booked,Not Booked,25 Sep 15:33
-25 Sep 2026,Fri,4:00 pm to 5:00 pm,Not Booked,Not Booked,Not Booked,25 Sep 16:32
-25 Sep 2026,Fri,5:00 pm to 6:00 pm,Not Booked,Not Booked,Not Booked,25 Sep 17:32
-25 Sep 2026,Fri,6:00 pm to 7:00 pm,Not Booked,Not Booked,Not Booked,25 Sep 18:37
-25 Sep 2026,Fri,7:00 pm to 8:00 pm,Not Booked,Not Booked,Not Booked,25 Sep 19:34
-25 Sep 2026,Fri,8:00 pm to 9:00 pm,Not Booked,Not Booked,Not Booked,25 Sep 20:33
-25 Sep 2026,Fri,9:00 pm to 10:00 pm,Not Booked,Not Booked,Not Booked,25 Sep 21:31
-25 Sep 2026,Fri,10:00 pm to 11:00 pm,Not Booked,Not Booked,Not Booked,25 Sep 22:33
-25 Sep 2026,Fri,11:00 pm to 12:00 am,Not Booked,Not Booked,Not Booked,25 Sep 23:32
+26 Sep 2026,Sat,12:00 am to 1:00 am,Not Booked,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,1:00 am to 2:00 am,,,,
+26 Sep 2026,Sat,2:00 am to 3:00 am,,,,
+26 Sep 2026,Sat,3:00 am to 4:00 am,,,,
+26 Sep 2026,Sat,4:00 am to 5:00 am,,,,
+26 Sep 2026,Sat,5:00 am to 6:00 am,,,,
+26 Sep 2026,Sat,6:00 am to 7:00 am,,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,7:00 am to 8:00 am,Not Booked,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,8:00 am to 9:00 am,,,Booked,26 Sep 00:33
+26 Sep 2026,Sat,9:00 am to 10:00 am,,,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,10:00 am to 11:00 am,Not Booked,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,11:00 am to 12:00 pm,Not Booked,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,12:00 pm to 1:00 pm,Not Booked,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,1:00 pm to 2:00 pm,Not Booked,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,2:00 pm to 3:00 pm,,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,3:00 pm to 4:00 pm,,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,4:00 pm to 5:00 pm,Not Booked,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,5:00 pm to 6:00 pm,Not Booked,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,6:00 pm to 7:00 pm,Not Booked,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,7:00 pm to 8:00 pm,Not Booked,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,8:00 pm to 9:00 pm,Not Booked,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,9:00 pm to 10:00 pm,Not Booked,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,10:00 pm to 11:00 pm,Not Booked,Not Booked,Not Booked,26 Sep 00:33
+26 Sep 2026,Sat,11:00 pm to 12:00 am,Not Booked,Not Booked,Not Booked,26 Sep 00:33
