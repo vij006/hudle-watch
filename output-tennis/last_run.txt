@@ -1,27 +1,27 @@
-Hudle watch — 25 Sep 2026 23:56 — 6 venue(s), tennis, dates: 25 Sep
+Hudle watch — 26 Sep 2026 00:23 — 6 venue(s), tennis, dates: 26 Sep
 (within Hudle's 4-day window — no page-forward needed, so this is quick)
 Running 4 venues at a time.
 [1/6] way-to-slam-tennis-academy
 [2/6] apex-sports-academy-noida
 [3/6] spodium-arena
-    Apex Sports Academy | Noida / Tennis (Clay Courts) / Tennis (Clay Courts): 12 slots, 0 available
-[4/6] ramagya-sports-academy
-    Way To Slams Tennis Academy / Tennis (Clay Courts) / Tennis (Clay Courts): 48 slots, 1 available
-[5/6] global-sports-complex-noida
+[4/6] indrayu-jeta-sports-noida
+    Apex Sports Academy | Noida / Tennis (Clay Courts) / Tennis (Clay Courts): 12 slots, 7 available
+[5/6] ramagya-sports-academy
+    Spodium Arena | Sector 29 / Tennis (Clay Court) / Tennis Court (Clay): 38 slots, 38 available
+    Indrayu Jeta Sports | Noida / Tennis (Acrylic Court) / Tennis (Acrylic Court): 16 slots, 12 available
+    Way To Slams Tennis Academy / Tennis (Clay Courts) / Tennis (Clay Courts): 48 slots, 38 available
+[6/6] global-sports-complex-noida
     Ramagya Sports Academy: no matching sport, skipped
-[6/6] indrayu-jeta-sports-noida
-    Spodium Arena | Sector 29 / Tennis (Clay Court) / Tennis Court (Clay): 38 slots, 1 available
-    Global Sports Complex | Noida / Tennis (Synthetic Court) / Tennis Court: 38 slots, 0 available
-    Indrayu Jeta Sports | Noida / Tennis (Acrylic Court) / Tennis (Acrylic Court): 16 slots, 0 available
-CSV rows: 89  ->  /home/runner/work/hudle-watch/hudle-watch/output-tennis/latest.csv
-Grid rows: 46  x 5 courts  ->  /home/runner/work/hudle-watch/hudle-watch/output-tennis/grid.csv
+    Global Sports Complex | Noida / Tennis (Synthetic Court) / Tennis Court: 38 slots, 19 available
+CSV rows: 117  ->  /home/runner/work/hudle-watch/hudle-watch/output-tennis/latest.csv
+Grid rows: 48  x 5 courts  ->  /home/runner/work/hudle-watch/hudle-watch/output-tennis/grid.csv
 Per-venue sheets: 5 files -> /home/runner/work/hudle-watch/hudle-watch/output-tennis/venues
 Day grid: /home/runner/work/hudle-watch/hudle-watch/output-tennis/byday/day0.csv
 Day grid: /home/runner/work/hudle-watch/hudle-watch/output-tennis/byday/day1.csv
 Day grid: /home/runner/work/hudle-watch/hudle-watch/output-tennis/byday/day2.csv
 Day grid: /home/runner/work/hudle-watch/hudle-watch/output-tennis/byday/day3.csv
-Archive: 768 rows across 8 day(s) -> /home/runner/work/hudle-watch/hudle-watch/output-tennis/archive.csv
+Archive: 885 rows across 9 day(s) -> /home/runner/work/hudle-watch/hudle-watch/output-tennis/archive.csv
 
-82 slots open across 5 courts (1 date(s) held in history).
+114 slots open across 5 courts (1 date(s) held in history).
 No changes since last run.
-Workbook: /home/runner/work/hudle-watch/hudle-watch/output-tennis/courts_2026-09-25_2357.xlsx
+Workbook: /home/runner/work/hudle-watch/hudle-watch/output-tennis/courts_2026-09-26_0023.xlsx
