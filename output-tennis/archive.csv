@@ -1379,10 +1379,10 @@ Date,Day,Slot Time,Venue,Court,Status,Price,Last checked
 2026-10-13,Tue,6:00 pm to 7:00 pm,Indrayu Jeta Sports | Noida,Tennis (Acrylic Court),Booked,222,13 Oct 18:37
 2026-10-13,Tue,7:00 pm to 8:00 pm,Indrayu Jeta Sports | Noida,Tennis (Acrylic Court),Booked,222,13 Oct 19:34
 2026-10-13,Tue,8:00 pm to 9:00 pm,Indrayu Jeta Sports | Noida,Tennis (Acrylic Court),Booked,222,13 Oct 20:31
-2026-10-13,Tue,10:00 pm to 10:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 21:02
-2026-10-13,Tue,10:30 pm to 11:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 21:02
-2026-10-13,Tue,11:00 pm to 11:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 21:02
-2026-10-13,Tue,11:30 pm to 12:00 am,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 21:02
+2026-10-13,Tue,10:00 pm to 10:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 21:29
+2026-10-13,Tue,10:30 pm to 11:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 21:29
+2026-10-13,Tue,11:00 pm to 11:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 21:29
+2026-10-13,Tue,11:30 pm to 12:00 am,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 21:29
 2026-10-13,Tue,2:00 pm to 2:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 14:28
 2026-10-13,Tue,2:30 pm to 3:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 14:28
 2026-10-13,Tue,3:00 pm to 3:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 15:28
@@ -1399,16 +1399,16 @@ Date,Day,Slot Time,Venue,Court,Status,Price,Last checked
 2026-10-13,Tue,7:30 pm to 8:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 19:34
 2026-10-13,Tue,8:00 pm to 8:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 20:04
 2026-10-13,Tue,8:30 pm to 9:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 20:31
-2026-10-13,Tue,9:00 pm to 9:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 21:02
-2026-10-13,Tue,9:30 pm to 10:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 21:02
+2026-10-13,Tue,9:00 pm to 9:30 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 21:29
+2026-10-13,Tue,9:30 pm to 10:00 pm,Spodium Arena | Sector 29,Tennis Court (Clay),Not Booked,199,13 Oct 21:29
 2026-10-13,Tue,10:00 am to 10:30 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,150,13 Oct 10:29
-2026-10-13,Tue,10:00 pm to 10:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 21:02
+2026-10-13,Tue,10:00 pm to 10:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 21:29
 2026-10-13,Tue,10:30 am to 11:00 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,150,13 Oct 10:29
-2026-10-13,Tue,10:30 pm to 11:00 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 21:02
+2026-10-13,Tue,10:30 pm to 11:00 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 21:29
 2026-10-13,Tue,11:00 am to 11:30 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,150,13 Oct 11:27
-2026-10-13,Tue,11:00 pm to 11:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 21:02
+2026-10-13,Tue,11:00 pm to 11:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 21:29
 2026-10-13,Tue,11:30 am to 12:00 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,150,13 Oct 11:27
-2026-10-13,Tue,11:30 pm to 12:00 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 21:02
+2026-10-13,Tue,11:30 pm to 12:00 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 21:29
 2026-10-13,Tue,12:00 am to 12:30 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 00:03
 2026-10-13,Tue,12:00 pm to 12:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,150,13 Oct 12:08
 2026-10-13,Tue,12:30 am to 1:00 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 00:58
@@ -1436,6 +1436,6 @@ Date,Day,Slot Time,Venue,Court,Status,Price,Last checked
 2026-10-13,Tue,8:00 pm to 8:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 20:04
 2026-10-13,Tue,8:30 pm to 9:00 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 20:31
 2026-10-13,Tue,9:00 am to 9:30 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,150,13 Oct 09:28
-2026-10-13,Tue,9:00 pm to 9:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 21:02
+2026-10-13,Tue,9:00 pm to 9:30 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 21:29
 2026-10-13,Tue,9:30 am to 10:00 am,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,150,13 Oct 09:28
-2026-10-13,Tue,9:30 pm to 10:00 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 21:02
+2026-10-13,Tue,9:30 pm to 10:00 pm,Way To Slams Tennis Academy,Tennis (Clay Courts),Not Booked,300,13 Oct 21:29
